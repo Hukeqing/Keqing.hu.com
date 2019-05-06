@@ -1,44 +1,809 @@
-<html>
-  <head>
-    <title>HKQ</title> 
-  </head>
-  <body>
-    <div>
-      <img src = "mauve.png" width = "392" height = "216"/>
-    </div>
-    <div style = "background-color:#FF00FF;">
-      <h1>
-        Hello
-      </h1>
-      <p>
-        <b>
-          欢迎光临我的主页
-        </b>
-      </p>
-    </div>
-    <div style = "background-color:#FFD700;">
-      <h2>
-        我的游戏项目源码
-      </h2>
-      <p>
-        <a href="https://github.com/Hukeqing/Superior-Tower-Defence">Superior-Tower-Defence</a>
-      </p>
-    </div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="canonical" href="https://blog.csdn.net/m0_43448982"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+        <meta name="csdn-baidu-search"  content='{"autorun":true,"install":true,"keyword":"【AC自动机的博客】欢迎光临我的博客，这里专为小白服务，喜欢的话点个关注哦"}'>
+    
+    <link href="https://csdnimg.cn/public/favicon.ico" rel="SHORTCUT ICON">
+    <title>【AC自动机的博客】欢迎光临我的博客，这里专为小白服务，喜欢的话点个关注哦 - CSDN博客</title>
+
+        
+                    <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/template/css/list-07440acc4e.min.css">
+            
+        
+          <link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/themes/skin-blackboard/skin-blackboard-1340d63bd5.min.css">
+        <script type="text/javascript">
+        var username = "m0_43448982";
+        var userPermission = false;
+        var blog_address = "https://blog.csdn.net/m0_43448982";
+        var static_host = "https://csdnimg.cn/release/phoenix/";
+        var currentUserName = "m0_43448982";
+        var currentUserPermission = false;
+        var isShowAds = true;
+        var isOwner = true;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/m0_43448982"
+        var blogUrl = "https://blog.csdn.net/";
+        //页面皮肤样式
+        var curSkin = "skin-blackboard";
+        // 第四范式所需数据
+        var articleTitles = "【AC自动机的博客】欢迎光临我的博客，这里专为小白服务，喜欢的话点个关注哦";
+        var articleID = "";
+        
+        var nickName = "Lcost";
+        var isCorporate = false;
+        var subDomainBlogUrl = "https://blog.csdn.net/"
+        var digg_base_url = "https://blog.csdn.net/m0_43448982/phoenix/comment";
+        var articleDetailUrl = "";
+    </script>
     <script type="text/javascript">
-            // 浏览器标题切换
-            var OriginTitile = document.title;    // 保存之前页面标题
-            var titleTime;
-            document.addEventListener('visibilitychange', function(){
-                                      if (document.hidden){
-                                      document.title ='I am here! QwQ';
-                                      clearTimeout(titleTime);
-                                      }else{
-                                      document.title = '你回来啦 QvQ ~(o°ω°o) happy ';
-                                      titleTime = setTimeout(function() {
-                                                             document.title = OriginTitile;
-                                                             }, 1000); // 2秒后恢复原标题
-                                      }
-                                      });
-     </script>
-  </body>
+        // Traffic Stats of the entire Web site By baidu
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6bcd52f51e9b3dce32bec4a3997715ac";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        // Traffic Stats of the entire Web site By baidu end
+    </script>
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="https://csdnimg.cn/rabbit/exposure-click/main-1.0.6.js"></script>
+    <script src="//g.csdnimg.cn/fixed-sidebar/1.1.3/fixed-sidebar.js" type="text/javascript"></script>
+    <!-- 新版上报 -->
+      <script src="//g.csdnimg.cn/track/1.2.4/track.js" type="text/javascript"></script>
+    <!-- 新版上报end -->
+
+    <link rel="stylesheet" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+</head>
+<!-- nodata 第三栏接口无数据时样式不变 -->
+<body class="nodata " > 
+    <link rel="stylesheet" href="https://csdnimg.cn/public/common/toolbar/content_toolbar_css/content_toolbar.css">
+    <script id="toolbar-tpl-scriptId" src="https://csdnimg.cn/public/common/toolbar/js/content_toolbar.js" type="text/javascript" domain="https://blog.csdn.net/"></script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.css">
+<header>
+	<div class="container d-flex clearfix" style="background-image: ">
+		<div class="title-box">
+			<h1 class="title-blog">
+				<a href="https://blog.csdn.net/m0_43448982">AC自动机的博客</a>
+			</h1>
+			<p class="description ">欢迎光临我的博客，这里专为小白服务，喜欢的话点个关注哦</p>
+		</div>
+		<div class="opt-box d-flex justify-content-end">
+						<a class="btn btn-sm" href="https://mp.csdn.net/postlist">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#csdnc-cog"></use>
+				</svg>管理博客</a>
+					</div>
+	</div>
+	</header>
+<script src="https://dup.baidustatic.com/js/ds.js"></script>
+<div class="container clearfix pt0" id="mainBox">
+    <main>
+      <div class="filter-box d-flex align-items-center">
+      <form action="" id=seeOriginal>
+    <label class="chk-box" for="chkOriginal">
+      <input onchange="this.checked ? document.getElementById('seeOriginal').submit() : location.href = 'https://blog.csdn.net/m0_43448982'" type="checkbox" name="t" value="1"  id="chkOriginal">只看原创</label></form>
+    <dl class="filter-sort-box d-flex align-items-center">
+    <dt>排序：</dt>
+    <dd><a href="javascript:void(0);" class="btn-filter-sort active" target="_self">默认</a></dd>
+    <dd><a href="https://blog.csdn.net/m0_43448982?orderby=UpdateTime" class="btn-filter-sort " target="_self">按更新时间</a></dd>
+    <dd><a href="https://blog.csdn.net/m0_43448982?orderby=ViewCount" class="btn-filter-sort " target="_self">按访问量</a></dd>
+    <dd><a class="btn btn-sm rss" href="https://blog.csdn.net/m0_43448982/rss/list">
+		<svg class="icon" aria-hidden="true">
+			<use xlink:href="#csdnc-rss"></use>
+		</svg>RSS订阅</a>
+    </dd>
+  </dl>
+</div>
+
+
+
+<div class="article-list">
+    
+    <div class="article-item-box csdn-tracking-statistics" style="display: none;" data-articleid="82762601">
+        <h4 class="">
+            <a href="https://blog.csdn.net/yoyo_liyy/article/details/82762601" target="_blank">
+            <span class="article-type type-1">原</span>帝都的凛冬</a>
+        </h4>
+        <p class="content">
+            <a href="https://blog.csdn.net/yoyo_liyy/article/details/82762601" target="_blank">
+                各种AI、人工智能、大数据如秋日凉爽的风，杳然erzhi；区块链的风头得到短暂的下降。
+
+                此次山竹台风造成了多少伤亡和破坏？人民的生命和财产遭受重大损失
+            </a>
+        </p>
+        <div class="info-box d-flex align-content-center">
+            <p>
+                <span class="date">2019-05-06 22:29:04</span>
+            </p>
+            <p>
+                <span class="read-num">阅读数：13</span>
+            </p>
+            <p>
+                <span class="read-num">评论数：2</span>
+            </p>
+        </div>
+    </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="89340794">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/89340794" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C++】C++特殊用法总结（二）超级格式化输出      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/89340794" target="_blank">
+        有时候，我们总会遇到这样无聊的东西
+
+请使用C\C++程序输出如下图形（后面没有空格）
+
+
+然后既然是确定的图像，我们可以一堆printf / cout解决（我想写在一个printf / cout的人应该没有吧）
+但是我们能不能想python一样输出呢？
+（python可以通过’’’ ‘’'的格式...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-04-16 20:54:06</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">9</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/89340794">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="89340353">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/89340353" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C++】C++特殊用法总结（一）类Java的foreach、python的for      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/89340353" target="_blank">
+        使用过Java、C#的人都知道，有一个神奇的“for”语句叫做“foreach”，能够遍历“可迭代对象”。
+这里以C#为例：
+//C#
+foreach (var item in &quot;123&quot;)
+{
+	System.Console.WriteLine(item);
+}
+
+pytho...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-04-16 19:47:22</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">8</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/89340353">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="89080654">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/89080654" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C++】算数表达式求值（易扩充版）      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/89080654" target="_blank">
+        网上有很多的算数表达式求值的代码，但是不易扩充，而且对各种形式的表达式适配很差，特别是对“负号”和“减号”的区别几乎没有，这里贴上我自己写的一个算数表达式的代码。至于求解原理请参照网络上的其他博客
+//首先我们把运算符都在一个map里注册一下，数值为该运算符的优先级
+//这里添加的 $、#、%、e...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-04-08 08:57:36</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">6</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/89080654">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="88053124">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/88053124" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        C++的template 模版类（仅函数）      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/88053124" target="_blank">
+        打acm的时候遇到过大量的数据，所以备有一些快读的模版。但是那么多的数据类型，就会出现下面这种情况：
+inline bool FastRead (int&amp;amp;amp; x) {
+    x = 0; char f = 0; int ch = getchar();
+    if (ch ...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-03-01 12:40:06</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">16</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/88053124">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="86608790">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/86608790" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        聊聊排序算法（总结常用的排序算法）      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/86608790" target="_blank">
+        以下内容均为个人手打，可能会有一些错误，如果有读者发现有错请指出
+
+无聊的总结了一下排序算法，好像常用的也就那么几种吧（以上分类方式仅个人意见，很多排序方式其实可以同时属于两个分类）
+比较排序
+这是排序算法中最为常见的一种排序方式。如果没有提到过非比较排序的话，可能不少读者认为排序就是需要...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-02-02 12:48:07</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">30</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/86608790">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="86563417">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/86563417" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        HDU-1251 统计难题（我就是不用字典树）      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/86563417" target="_blank">
+        统计难题
+Problem Description
+Ignatius最近遇到一个难题,老师交给他很多单词(只有小写字母组成,不会有重复的单词出现),现在老师要他统计出以某个字符串为前缀的单词数量(单词本身也是自己的前缀).
+Input
+输入数据的第一部分是一张单词表,每行一个单词,单词的长度...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-01-20 16:51:29</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">31</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/86563417">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="86562560">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/86562560" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        HDU-4252 A Famous City（单调栈）      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/86562560" target="_blank">
+        A Famous City
+Problem Description
+After Mr. B arrived in Warsaw, he was shocked by the skyscrapers and took several photos. But now when he looks a...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-01-20 16:11:53</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">44</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/86562560">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="85877886">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/85877886" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C/C++】寻路系统：BFS&amp;DFS      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/85877886" target="_blank">
+        应一些朋友的请求，我就准备起笔写这篇博客了，因为本人非常懒（大概是和女朋友相处多了就被同化了 ），就不画一大堆图片来解释说明了，尽量只靠文字解决。最后补上一句几乎固定的话：如果喜欢本文，记得点赞哦；如果对我的博客较为满意的话，可以点一下左边的关注哦
+还是和以前的习惯一样，先上OJ题
+逃离迷宫
+...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-01-06 09:42:34</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">181</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/85877886">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="85849138">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/85849138" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C】关于打表法的简单介绍      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/85849138" target="_blank">
+        本文只是简单介绍打表法，各位大佬可以忽略本文，如果有大佬对本文有修改意见，欢迎评论
+还是先上OJ题目
+这是一道浙江工业大学的OJ题目，由于是内网链接，这里只能给出题号了：1677（题目有一定的修改，主要是为了体现打表法的优势）
+数1的个数
+题目描述
+给定一个十进制正整数n（1&amp;a...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2019-01-05 15:56:09</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">320</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/85849138">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="85385002">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/85385002" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C】最长递增子串（LIS）求解      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/85385002" target="_blank">
+        LIS（Longest Increasing Subsequence）最长递增子串问题是一道非常基础的DP问题，这里我们主要是为了给各位解释解决DP问题的最重要的方法之一——记忆化搜索，这里仅讲解复杂度为O（N2）的方法解决此问题，并且这里我们只需要求出最长子串长度，对具体是哪条子串也不做讨论，本...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2018-12-30 15:31:09</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">102</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/85385002">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="85260518">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/85260518" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C】单源查找最短路径（负权边+单向路）      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/85260518" target="_blank">
+        先看一道OJ题
+时间旅行者
+题目描述
+爱因斯坦的相对论理论使得时间旅行成为可能。
+Sake想做一次时间旅行，从城市1出发，希望到达城市n的时刻是在出发之前。
+n个城市之间有m条单向路。通过这条路我们可能花费正时间到达未来，也可能花费负时间到达过去。我们保证从城市1出发肯定能到达城市n。
+...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2018-12-26 19:35:00</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">141</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/85260518">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+  <div class="article-item-box csdn-tracking-statistics" data-articleid="85228458">
+        <h4 class="">
+        <a href="https://blog.csdn.net/m0_43448982/article/details/85228458" target="_blank">
+        <span class="article-type type-1">
+            原        </span>
+        【C】关于qsort的使用      </a>
+    </h4>
+    <p class="content">
+      <a href="https://blog.csdn.net/m0_43448982/article/details/85228458" target="_blank">
+        C++中有很方便很实用的函数sort，但是对于刚刚学习写C语言的人来说，可能会有一些障碍，所以写个博客来解释一下C中的排序函数qsort，之后也会另发博客来解释sort函数
+本文仅用于给刚刚接触不久C语言的人解释qsort函数，各位大佬可以忽略本文
+先上示例代码
+//使用qsort函数（从小...      </a>
+    </p>
+    <div class="info-box d-flex align-content-center">
+      <p>
+        <span class="date">2018-12-24 09:17:33</span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">阅读数 <span class="num">69</span> </span>
+      </p>
+      <p class="point"></p>
+      <p>
+        <span class="read-num">评论数 <span class="num">0</span> </span>
+      </p>
+    </div>
+          <div class="opt-box">
+  		<button class="btn-opt" data-type="top">置顶</button>
+  		<a class="btn-opt" data-type="edit" href="https://mp.csdn.net/postedit/85228458">编辑</a>
+  		<button class="btn-opt" data-type="delete">删除</button>
+      </div>
+      </div>
+</div>
+    </main>
+    <aside>
+		    <div id="asideProfile" class="aside-box">
+    <!-- <h3 class="aside-title">个人资料</h3> -->
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://me.csdn.net/m0_43448982">
+              <img src="https://avatar.csdn.net/2/9/8/3_m0_43448982.jpg" class="avatar_pic">
+                              <img src="https://g.csdnimg.cn/static/user-reg-year/1x/1.png" class="user-years">
+                          </a>
+            
+        </div>
+        <div class="user-info d-flex justify-content-center flex-column">
+            <p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
+                <a href="https://me.csdn.net/m0_43448982" target="_blank" class="" id="uid">Lcost</a>
+            </p>
+                    </div>
+            </div>
+    <div class="data-info d-flex item-tiling">
+                <dl class="text-center" title="12">
+                        <dt><a href="https://blog.csdn.net/m0_43448982?t=1">原创</a></dt>
+            <dd><a href="https://blog.csdn.net/m0_43448982?t=1"><span class="count">12</span></a></dd>
+                    </dl>
+        <dl class="text-center" id="fanBox" title="7">
+            <dt>粉丝</dt>
+            <dd><span class="count" id="fan">7</span></dd>
+        </dl>
+        <dl class="text-center" title="8">
+            <dt>喜欢</dt>
+            <dd><span class="count">8</span></dd>
+        </dl>
+        <dl class="text-center" title="0">
+            <dt>评论</dt>
+            <dd><span class="count">0</span></dd>
+        </dl>
+    </div>
+    <div class="grade-box clearfix">
+        <dl>
+            <dt>等级：</dt>
+            <dd>
+                <a href="https://blog.csdn.net/home/help.html#level" title="2级,点击查看等级说明" target="_blank">
+                    <svg class="icon icon-level" aria-hidden="true">
+                        <use xlink:href="#csdnc-bloglevel-2"></use>
+                    </svg>
+                </a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>访问：</dt>
+            <dd title="1078">
+                1078            </dd>
+        </dl>
+        <dl>
+            <dt>积分：</dt>
+            <dd title="126">
+                126            </dd>
+        </dl>
+        <dl title="1283485">
+            <dt>排名：</dt>
+            <dd>128万+</dd>
+        </dl>
+    </div>
+        <div class="badge-box d-flex">
+        <span>勋章：</span>
+        <div class="badge d-flex">
+                                                                                                 <div class="icon-badge" title="勤写标兵Lv1">
+                   <div class="mouse-box">
+                      <img src="https://g.csdnimg.cn/static/user-medal/qinxiebiaobing_l1_t1.svg" alt="">
+                      <div class="icon-arrow"></div>
+                   </div>
+                   <div class="grade-detail-box">
+                       <div class="pos-box">
+                           <div class="left-box d-flex justify-content-center align-items-center flex-column">
+                                <img src="https://g.csdnimg.cn/static/user-medal/qinxiebiaobing_l1_t1.svg" alt="">
+                               <p>勤写标兵Lv1</p>
+                           </div>
+                           <div class="right-box">
+                               授予每个自然周发布1篇到3篇原创IT博文的用户。本勋章将于次周上午根据用户上周的博文发布情况由系统自动颁发。                           </div>
+                       </div>
+                   </div>
+               </div>
+                              </div>
+        <script>
+            (function ($) {
+                setTimeout(function(){
+                    $('div.icon-badge.show-moment').removeClass('show-moment');
+                }, 5000);
+            })(window.jQuery)
+        </script>
+    </div>
+    </div>
+		    <div class="csdn-tracking-statistics mb8 box-shadow" data-pid="blog" data-mod="popu_4" style="height:250px;">
+    <div class="aside-content text-center" id="cpro_u2734133">
+      <script type="text/javascript" src="//rabc1.iteye.com/production/openjs/d9o6b.js?bwo=coltly"></script>    </div>
+</div>
+		    		    		    <div id="asideCategory" class="aside-box">
+    <h3 class="aside-title">个人分类</h3>
+    <div class="aside-content">
+        <ul>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/m0_43448982/article/category/8564382">
+                    <span class="title oneline">算法</span>
+                    <span class="count float-right">6篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/m0_43448982/article/category/8556545">
+                    <span class="title oneline">关于函数与类的使用</span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/m0_43448982/article/category/8627426">
+                    <span class="title oneline">HDUOJ</span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                        <li>
+                <a class="clearfix" href="https://blog.csdn.net/m0_43448982/article/category/8865568">
+                    <span class="title oneline">C++特殊用法</span>
+                    <span class="count float-right">2篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+    </div>
+		    <div id="asideArchive" class="aside-box">
+    <h3 class="aside-title">归档</h3>
+    <div class="aside-content">
+        <ul class="archive-list">
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/m0_43448982/article/month/2019/04">
+                    2019年4月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/m0_43448982/article/month/2019/03">
+                    2019年3月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/m0_43448982/article/month/2019/02">
+                    2019年2月                    <span class="count float-right">1篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/m0_43448982/article/month/2019/01">
+                    2019年1月                    <span class="count float-right">4篇</span>
+                </a>
+            </li>
+                        <!--归档统计-->
+            <li>
+                <a href="https://blog.csdn.net/m0_43448982/article/month/2018/12">
+                    2018年12月                    <span class="count float-right">3篇</span>
+                </a>
+            </li>
+                    </ul>
+    </div>
+    </div>
+		    <div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list csdn-tracking-statistics tracking-click" data-mod="popu_521">
+							<li>
+					<a href="https://blog.csdn.net/m0_43448982/article/details/85849138">【C】关于打表法的简单介绍</a>
+					<p class="read">阅读数 <span>315</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/m0_43448982/article/details/85877886">【C/C++】寻路系统：BFS&amp;DFS</a>
+					<p class="read">阅读数 <span>179</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/m0_43448982/article/details/85260518">【C】单源查找最短路径（负权边+单向路）</a>
+					<p class="read">阅读数 <span>141</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/m0_43448982/article/details/85385002">【C】最长递增子串（LIS）求解</a>
+					<p class="read">阅读数 <span>102</span></p>
+				</li>
+							<li>
+					<a href="https://blog.csdn.net/m0_43448982/article/details/85228458">【C】关于qsort的使用</a>
+					<p class="read">阅读数 <span>69</span></p>
+				</li>
+					</ul>
+	</div>
+</div>
+		    		<div id="asideFooter">
+			
+		<div class="aside-box">
+			<script type="text/javascript" src="//rabc1.iteye.com/source/h751.js?avneunkw=b"></script>		</div>
+				<div class="aside-box">
+			<div class="persion_article">
+			</div>
+		</div>
+	</div>
+</aside>
+<script src="https://csdnimg.cn/pubfooter/js/publib_footer-1.0.3.js" data-isfootertrack="false" type="text/javascript"></script>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).remove();
+	})
+</script>
+</div>
+<div class="mask"></div>
+<div class="promptBox clearfix">
+    <div class="title clearfix bottom-dis-16">
+        <span class="float-left">提示</span>
+        <a class="float-right Boxclose">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#csdnc-times"></use>
+            </svg>
+        </a>
+    </div>
+    <div class="text">确定要删除当前文章？</div>
+    <div class="pro-btn float-right">
+        <a class="clickNo">取消</a>
+        <a class="clickYes">删除</a>
+    </div>
+</div>
+<script>
+    var currentPage = 1;
+    var baseUrl = 'https://blog.csdn.net/m0_43448982/article/list' ;
+    var pageSize = 20 ;
+    var listTotal = 12 ;
+    var pageQueryStr = '?';
+    function getAllUrl(page) {
+        return baseUrl + "/" + page + pageQueryStr;
+    }
+</script>
+<script src="//g.csdnimg.cn/??login-box/1.0.5/login-box.js,login-box/1.0.5/login-auto.js?t=20190307095522"></script>
+
+<script src="https://csdnimg.cn/release/phoenix/vendor/pagination/paging.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/common-0100d9c3da.min.js"></script>
+<script src="https://csdnimg.cn/release/phoenix/template/js/list-7c51275791.min.js"></script>
+
+
+<script src="https://csdnimg.cn/public/common/gotop/js/goTop-v1.0.min.js?v201904241615"></script><script>
+    GoTop({
+        right: 8
+    })
+</script>
+<div class="box-box-default">
+    <a class="btn-remove">
+        关闭
+    </a>
+    <script type="text/javascript" src="//cee1.iteye.com/mhzzjepzz.js"></script>
+</div>
+<div class="box-box-large">
+    <a class="btn-remove">
+        关闭
+    </a>
+    <script type="text/javascript" src="//cee1.iteye.com/idvveasfs.js"></script>
+</div>
+</body>
 </html>
