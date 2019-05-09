@@ -1,0 +1,147 @@
+
+body {
+    margin: 0;
+    font-size: 100%;
+    background: rgba(255,255,255);
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+h1.main {
+    display: block;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 35pt;
+    color: black;
+    text-shadow: 5px 5px 5px #FFFF70;
+}
+h1.buttons {
+    display: block;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+}
+h2.main {
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    text-shadow: 3px 3px 3px #FFFF70;
+}
+
+h2.titles {
+    letter-spacing: 1px;
+    font-weight: bold;
+    left: 100pt;
+    text-transform: capitalize;
+    color: white;
+}
+
+h3.main {
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    text-shadow: 3px 3px 3px #FFFF70;
+}
+
+h4.main {
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+}
+
+a.noline {
+    text-decoration: none;
+}
+:link {
+    color: blue;
+}
+:visited {
+    color: blue;
+}
+:hover {
+    color: blue;
+}
+
+
+div.first {
+    height: 350px;
+    background: -webkit-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* 标准的语法（必须放在最后） */
+    margin: 0;
+}
+
+div.second {
+    margin: 0;
+    position: absolute;
+    top: 350px;
+    left: 0pt;
+    right: 0pt;
+    height: 350px;
+    background: -webkit-linear-gradient(rgba(70, 70, 255, 0.5), rgba(70, 255, 0, 0.5)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(70, 70, 255, 0.5), rgba(70, 255, 0, 0.5)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(70, 70, 255, 0.5), rgba(70, 255, 0, 0.5)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(70, 70, 255, 0.5), rgba(70, 255, 0, 0.5)); /* 标准的语法（必须放在最后） */
+}
+
+div.third {
+    margin: 0;
+    position: absolute;
+    top: 700px;
+    left: 0pt;
+    right: 0pt;
+    height: 350px;
+    background: -webkit-linear-gradient(rgba(70, 255, 0, 0.5), rgba(70, 255, 0, 0)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(70, 255, 0, 0.5), rgba(70, 255, 0, 0)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(70, 255, 0, 0.5), rgba(70, 255, 0, 0)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(70, 255, 0, 0.5), rgba(70, 255, 0, 0)); /* 标准的语法（必须放在最后） */
+}
+
+div.centers {
+    width: 600pt;
+    margin: 0 auto;
+}
+div.centerss {
+    width: 400pt;
+    margin: 0 auto;
+}
+
+img.radiuscenter {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10pt;
+    width: 100pt;
+    height: 100pt;
+    background-color: #df0fdf;
+    border-radius: 50%;
+}
+img.centers {
+    display: block;
+    margin: 0 auto;
+    width: 150pt;
+    height: 150pt;
+}
+img.centerandbroder {
+    display: block;
+    margin: 0 auto;
+    width: 150pt;
+    height: 150pt;
+    border-style: dotted;
+    background-color: rgba(0, 70, 255, 0.5)
+}
+
+button {
+    width: 150px;
+    border-style: dotted;
+    background-color: blue;
+}

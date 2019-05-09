@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <title>
+        Hukeqing
+    </title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <div class="first">
+        <div>
+            <h1 class="main">
+                <a class="noline" href="index.html">
+                    Hi
+                </a>
+            </h1>
+        </div>
+        <div>
+            <img src="image/admin.jpg" class="radiuscenter" />
+        </div>
+        <div>
+            <h2 class="main">
+                I am Mauve
+            </h2>
+            <h3 class="main">
+                An independent game developer
+            </h3>
+        </div>
+    </div>
+    <div class="second">
+        <div class="centers">
+            <script type="text/javascript">
+                function getclick(id) {
+                    document.getElementById("select1").style.display = "none";
+                    document.getElementById("select2").style.display = "none";
+                    document.getElementById("select3").style.display = "none";
+                    document.getElementById("select4").style.display = "none";
+                    document.getElementById(id).style.display = "block";
+                }
+            </script>
+            <button onclick="getclick('select1')">
+                <h1 class="buttons">
+                    About Me
+                </h1>
+            </button>
+            <button onclick="getclick('select2')">
+                <h1 class="buttons">
+                    About Game
+                </h1>
+            </button>
+            <button onclick="getclick('select3')">
+                <h1 class="buttons">
+                    My Project
+                </h1>
+            </button>
+            <button onclick="getclick('select4')">
+                <h1 class="buttons">
+                    Call me
+                </h1>
+            </button>
+        </div>
+
+        <div id="select1" class="centerss" style="display:none">
+            <h2 class="titles">
+                I am
+            </h2>
+            <p>
+                我是一个独立游戏开发者
+            </p>
+            <p>
+                会使用<b><a href="http://www.unity.com" class="noline"
+                        target="_blank">unity</a></b>引擎，能熟练使用<b>C/C++、C#、html、markdown、css</b>等
+            </p>
+            <p>
+                拥有4年以上的程序学习与实践经历
+            </p>
+        </div>
+
+        <div id="select2" class="centerss" style="display:none">
+            <h2 class="titles">
+                <a class="noline" href="https://baike.baidu.com/item/独立游戏/10985117?fr=aladdin" target="_blank">
+                    What is independent game
+                </a>
+            </h2>
+            <p>
+                就国外来说，在没有商业资金的影响或者不以商业发行为目的，独立完成制作，都可认为是独立游戏制作行为
+            </p>
+            <p>
+                独立游戏(Independent Game)制作是相对于商业游戏制作而存在的另一种游戏制作方式。
+            </p>
+        </div>
+
+        <div id="select3" class="centerss" style="display:none">
+            <h2 class="main">
+                Hope you will like them
+            </h2>
+            <div class="centerss">
+                <a href="file/Superior Tower Defence.rar" target="_blank"><img src="image/Home.png" class="centerandbroder" /></a>
+            </div>
+        </div>
+
+        <div id="select4" class="centerss" style="display:none">
+            <h2 class="main">
+                Please contact me by e-mail.
+            </h2>
+            <h3 class="main">
+                <a href="mailto:keqing.hu@icloud.com?Subject=Hello%20Mauve" class="noline">keqing.hu@icloud.com</a>
+            </h3>
+        </div>
+
+    </div>
+    <div class="third">
+
+    </div>
+    <script type="text/javascript">
+        // 浏览器标题切换
+        var OriginTitile = document.title;    // 保存之前页面标题
+        var titleTime;
+        document.addEventListener('visibilitychange', function () {
+            if (document.hidden) {
+                document.title = 'I am here! QwQ';
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = '你回来啦 QvQ ~(o°ω°o) happy ';
+                titleTime = setTimeout(function () {
+                    document.title = OriginTitile;
+                }, 1000); // 2秒后恢复原标题
+            }
+        });
+    </script>
+</body>
+
+</html>
