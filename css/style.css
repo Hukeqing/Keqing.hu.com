@@ -88,11 +88,9 @@ div.first {
     background: -o-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Firefox 3.6 - 15 */
     background: linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* 标准的语法（必须放在最后） */
-    margin: 0;
 }
 
 div.second {
-    margin: 0;
     position: absolute;
     top: 350px;
     left: 0pt;
@@ -105,12 +103,11 @@ div.second {
 }
 
 div.third {
-    margin: 0;
     position: absolute;
     top: 700px;
     left: 0pt;
     right: 0pt;
-    height: 350px;
+    height: 300px;
     background: -webkit-linear-gradient(rgba(70, 255, 0, 0.5), rgba(70, 255, 0, 0)); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(rgba(70, 255, 0, 0.5), rgba(70, 255, 0, 0)); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(rgba(70, 255, 0, 0.5), rgba(70, 255, 0, 0)); /* Firefox 3.6 - 15 */
