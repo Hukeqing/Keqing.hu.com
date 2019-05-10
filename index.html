@@ -6,7 +6,7 @@
     </title>
     <embed class="bgm" src="audio/bgm1.mp3" autostart="true" loop="true" />
     <meta charset="UTF-8" />
-    <link rel="icon" href="image/Home.png" type="image/x-icon"/>
+    <link rel="icon" href="image/Home.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 </head>
 
@@ -131,6 +131,42 @@
         </div>
     </div>
     <div class="third">
+        <hr>
+        <div class="centers">
+            <a href="https://www.bilibili.com/video/av17977491" class="noline" target="_blank">
+                <img src="image/GameAndArts.jpg" />
+            </a>
+            <div>
+                <h3 class="titles">
+                    电子游戏是不是艺术？
+                </h3>
+                <p class="indent">
+                    2006年合金装备的制作人小岛秀夫接受美国PS2杂志采访。当被问道电子游戏是不是艺术的时候，小岛秀夫谦虚的给出了否定的答案。但是他这样说道：
+                </p>
+                <p class="indent">
+                    <b>
+                        艺术是你在博物馆里找到的东西，比如一幅画或者一件雕塑。我所做的，游戏制作人正在做的，就是博物馆管理员。我们擦亮他们，设计排列这些艺术品和销售门票
+                    </b>
+                </p>
+            </div>
+        </div>
+        <div class="lists">
+            <div>
+                <h3 class="titles">
+                    Monument Valley
+                </h3>
+                <p class="indent">
+                    2015年在英国电影电视艺术学院大奖的颁奖典礼上，《纪念碑谷》格外的显眼。作为一款手机游戏，它一次性获得了五项提名。
+                </p>
+                <h4 class="main">
+                    艺术成就奖<br>最佳移动设备游戏<br>2015年最佳游戏<br>2015年最佳原生游戏<br>2015年最佳英国游戏
+                </h4>
+            </div>
+            <a href="http://www.bafta.org/whats-on/bafta-online-crew-games-live-stream-monument-valley-2-qa"
+                class="noline" target="_blank">
+                <img src="image/monument valley.jpg" />
+            </a>
+        </div>
         <div class="footer">
             <p class="centers">
                 Copyright &copy; 2019.Mauve All rights reserved.
@@ -138,8 +174,7 @@
         </div>
     </div>
     <script type="text/javascript">
-        // 浏览器标题切换
-        var OriginTitile = document.title;    // 保存之前页面标题
+        var OriginTitile = document.title;
         var titleTime;
         document.addEventListener('visibilitychange', function () {
             if (document.hidden) {
@@ -150,7 +185,7 @@
                 document.title = '你回来啦 QvQ ~(o°ω°o) happy ';
                 titleTime = setTimeout(function () {
                     document.title = OriginTitile;
-                }, 1000); // 2秒后恢复原标题
+                }, 1000);
             }
         });
     </script>
@@ -161,26 +196,26 @@
             "model": {
                 jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
                 "scale": 1
-                },
-        "display": {
-            "position": "left",
-            "width": 150,
-            "height": 300,
-            "hOffset": 0,
-            "vOffset": -20
-        },
-        "mobile": {
-            "show": true,
-            "scale": 0.5
-        },
-        "react": {
-            "opacityDefault": 0.7,
-            "opacityOnHover": 0.2
-        }
-    });
-</script>
+            },
+            "display": {
+                "position": "right",
+                "width": 150,
+                "height": 300,
+                "hOffset": 0,
+                "vOffset": -20
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    </script>
 
-<!--
+    <!--
 其他可选的模型：
 黑猫：https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json
 萌娘：https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
