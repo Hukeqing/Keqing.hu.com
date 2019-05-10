@@ -24,6 +24,16 @@ h1.buttons {
     text-align: center;
     font-size: 15px;
 }
+h1.titles {
+    display: block;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 50pt;
+    color: #FFFF70;
+    text-shadow: 5px 5px 5px #FFFF70;
+}
 h2.main {
     letter-spacing: 1px;
     font-weight: 600;
@@ -108,11 +118,15 @@ div.third {
 }
 
 div.centers {
-    width: 461pt;
+    width: 700pt;
+    justify-content: center;
+    display: flex;
     margin: 0 auto;
 }
 div.centerss {
     width: 350pt;
+    justify-content: center;
+    display: flex;
     margin: 0 auto;
 }
 
@@ -125,15 +139,15 @@ img.radiuscenter {
     background-color: #df0fdf;
     border-radius: 50%;
 }
+
 img.centers {
     display: block;
     margin: 0 auto;
     width: 150pt;
     height: 150pt;
 }
+
 img.centerandbroder {
-    display: block;
-    margin: 0 auto;
     width: 150pt;
     height: 150pt;
     border-style: dotted;
@@ -142,6 +156,8 @@ img.centerandbroder {
 
 button {
     width: 150px;
+    margin-left: 5px;
+    margin-right: 5px;
     border-style: dotted;
     background-color: blue;
 }
