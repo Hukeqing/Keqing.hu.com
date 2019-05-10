@@ -4,6 +4,7 @@
     <title>
         Hukeqing
     </title>
+    <embed class="bgm" src="audio/bgm1.mp3" autostart="true" loop="true" />
     <meta charset="UTF-8" />
     <!-- <link rel="icon" href="image/mauve.png" type="image/x-icon"/> -->
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
@@ -31,16 +32,17 @@
         </div>
     </div>
     <div class="second">
+        <script type="text/javascript">
+            function getclick(id) {
+                document.getElementById("select1").style.display = "none";
+                document.getElementById("select2").style.display = "none";
+                document.getElementById("select3").style.display = "none";
+                document.getElementById("select4").style.display = "none";
+                document.getElementById("project1").style.display = "none";
+                document.getElementById(id).style.display = "block";
+            }
+        </script>
         <div class="centers">
-            <script type="text/javascript">
-                function getclick(id) {
-                    document.getElementById("select1").style.display = "none";
-                    document.getElementById("select2").style.display = "none";
-                    document.getElementById("select3").style.display = "none";
-                    document.getElementById("select4").style.display = "none";
-                    document.getElementById(id).style.display = "block";
-                }
-            </script>
             <button onclick="getclick('select1')">
                 <h1 class="buttons">
                     About Me
@@ -98,7 +100,8 @@
                 Hope you will like them
             </h2>
             <div class="centerss">
-                <a href="webpages/Superior Tower Defence.html"><img src="image/Home.png" class="centerandbroder" /></a>
+                <img src="image/Home.png" class="centerandbroder" onclick="getclick('project1')"
+                    onclick="showproject('project1href')" />
             </div>
         </div>
 
@@ -110,14 +113,29 @@
                 <a href="mailto:keqing.hu@icloud.com?Subject=Hello%20Mauve" class="noline">keqing.hu@icloud.com</a>
             </h3>
         </div>
-        <div class="centerss">
+        <div id="project1" class="centerss" style="display:none">
+            <h1 class="titles">
+                Superior Tower Defence
+            </h1>
+            <h1 class="main">
+                <a href="http://www.baidu.com" target="_blank" class="noline">
+                    前往官网
+                </a>
+                <a href="file/Superior Tower Defence.rar" target="_blank" class="noline">
+                    下载链接
+                </a>
+                <a href="https://github.com/Hukeqing/Superior-Tower-Defence" target="_blank" class="noline">
+                    获取源码
+                </a>
+            </h1>
+        </div>
+    </div>
+    <div class="third">
+        <div class="footer">
             <p class="centers">
                 Copyright &copy; 2019.Mauve All rights reserved.
             </p>
         </div>
-    </div>
-    <div class="third">
-
     </div>
     <script type="text/javascript">
         // 浏览器标题切换
