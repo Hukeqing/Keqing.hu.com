@@ -84,6 +84,8 @@ p.centers {
 
 p.indent {
     text-indent: 24pt;
+    padding-left: 10pt;
+    padding-right: 10pt;
 }
 a.noline {
     text-decoration: none;
@@ -188,7 +190,7 @@ img.centerandbroder {
     background-color: rgba(0, 70, 255, 0.5)
 }
 
-embed.bgm {
+.bgm {
     display: none;
 }
 
@@ -196,6 +198,15 @@ img.lists {
     width: 300pt;
     height: 200pt;
     background-color: #df0fdf;
+}
+
+img.mute {
+    position: absolute;
+    right: 10pt;
+    top: 10pt;
+    border-radius: 50%;
+    width: 50pt;
+    height: 50pt;
 }
 
 button {
