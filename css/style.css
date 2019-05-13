@@ -135,7 +135,6 @@ div.third {
     background: -moz-linear-gradient(rgba(70, 255, 0, 0.5), white); /* Firefox 3.6 - 15 */
     background: linear-gradient(rgba(70, 255, 0, 0.5), white); /* 标准的语法（必须放在最后） */
 }
-
 div.centers {
     width: 700pt;
     justify-content: center;
@@ -165,11 +164,27 @@ div.lists {
 }
 div.listlast {
     width: 700pt;
-    padding-bottom: 200pt;
+    padding-bottom: 300pt;
     justify-content: center;
     display: flex;
     margin: 0 auto;
     padding-top: 30pt;
+}
+div.live2d {
+    position: fixed;
+    right: 30px;
+    width: 130px;
+    height: 250px;
+    bottom: 50px;
+}
+div.comment {
+    position: fixed;
+    bottom: 330px;
+    right: 10px;
+    width: 170px;
+    height: 60px;
+    justify-content: center;
+    margin: auto;
 }
 img.radiuscenter {
     display: block;
@@ -196,27 +211,24 @@ img.centerandbroder {
     background-color: rgba(0, 70, 255, 0.5)
 }
 
-.bgm {
-    display: none;
-}
-
 img.lists {
-    width: 300pt;
-    height: 200pt;
-    background-color: #df0fdf;
+    width: 380px;
+    height: 240px;
+    background-color: darkorchid;
 }
 
 img.mute {
-    position: absolute;
+    position: fixed;
     right: 10pt;
     top: 10pt;
-    border-radius: 50%;
     width: 50pt;
     height: 50pt;
+    z-index: 9999;
+    transform: rotate(0deg)
 }
-
 button {
     width: 150px;
+    margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
     border-style: dotted;

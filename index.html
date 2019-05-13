@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <embed id="bgm" class="bgm" src="audio/bgm1.mp3" autostart="true" loop="true" />
+    <audio id="bgm" src="audio/bgm1.mp3" autoplay="autoplay" loop="loop" style="display: none;">
+    </audio>
     <title>
         Mauve
     </title>
@@ -32,16 +33,6 @@
         </div>
     </div>
     <div class="second">
-        <script type="text/javascript">
-            function getclick(id) {
-                document.getElementById("select1").style.display = "none";
-                document.getElementById("select2").style.display = "none";
-                document.getElementById("select3").style.display = "none";
-                document.getElementById("select4").style.display = "none";
-                document.getElementById("project1").style.display = "none";
-                document.getElementById(id).style.display = "block";
-            }
-        </script>
         <div class="centers">
             <button class="main" onclick="getclick('select1')">
                 <h1 class="buttons">
@@ -60,7 +51,7 @@
             </button>
             <button class="" onclick="getclick('select4')">
                 <h1 class="buttons">
-                    Call me
+                    contact me
                 </h1>
             </button>
         </div>
@@ -74,7 +65,7 @@
             </p>
             <p class="centers">
                 会使用<b><a href="http://www.unity.com" class="noline"
-                        target="_blank">unity</a></b>引擎，能熟练使用<b>C/C++、C#、html、markdown、css</b>等
+                        target="_blank">unity</a></b>引擎，能熟练使用<b>C/C++、C#、markdown、css</b>等
             </p>
             <p class="centers">
                 拥有4年以上的程序学习与实践经历
@@ -113,6 +104,16 @@
                 <a href="mailto:keqing.hu@icloud.com?Subject=Hello%20Mauve" class="noline">keqing.hu@icloud.com</a>
             </h3>
         </div>
+        <script type="text/javascript">
+            function getclick(id) {
+                document.getElementById("select1").style.display = "none";
+                document.getElementById("select2").style.display = "none";
+                document.getElementById("select3").style.display = "none";
+                document.getElementById("select4").style.display = "none";
+                document.getElementById("project1").style.display = "none";
+                document.getElementById(id).style.display = "block";
+            }
+        </script>
         <div id="project1" class="centerss" style="display:none">
             <h1 class="titles">
                 Superior Tower Defence
@@ -134,7 +135,7 @@
         <hr>
         <div class="centers">
             <a href="https://www.bilibili.com/video/av17977491" class="noline" target="_blank">
-                <img src="image/GameAndArts.jpg" />
+                <img src="image/GameAndArts.jpg" class="lists" />
             </a>
             <div>
                 <h3 class="titles">
@@ -164,12 +165,12 @@
             </div>
             <a href="http://www.bafta.org/whats-on/bafta-online-crew-games-live-stream-monument-valley-2-qa"
                 class="noline" target="_blank">
-                <img src="image/monument valley.jpg" />
+                <img src="image/monument valley.jpg" class="lists" />
             </a>
         </div>
         <div class="listlast">
             <a href="https://baike.baidu.com/item/第九艺术/938487?fr=aladdin" class="noline" target="_blank">
-                <img src="image/nineart.jpg" />
+                <img src="image/nineart.jpg" class="lists" />
             </a>
             <div>
                 <h3 class="titles">
@@ -190,7 +191,67 @@
         <p class="centers">
             Copyright &copy; 2019.Mauve All rights reserved.
         </p>
+        <div>
+            <div>
+                <img id="musicicon" src="image/wangyiyunyinleclick.png" class="mute" onclick="muteorcontinue()" />
+                <script type="text/javascript">
+                    var musicicon = document.getElementById("musicicon");
+                    var startrotate = setInterval(function () { rotate() }, 1);
+                    var curRotate = 0.0;
+                    function rotate() {
+                        curRotate += 0.2;
+                        musicicon.style.transform = "rotate(" + curRotate + "deg)";
+                    }
+                    var Obj = document.getElementById("bgm");
+                    function muteorcontinue() {
+                        if (Obj.muted == false) {
+                            clearInterval(startrotate);
+                            Obj.muted = true;
+                            Obj.pause();
+                        }
+                        else {
+                            startrotate = setInterval(function () { rotate() }, 1);
+                            Obj.muted = false;
+                            Obj.play();
+                        }
+                    }
+                </script>
+            </div>
+        </div>
     </div>
+    <div class="comment">
+        <script type="text/javascript">
+            var a = new Array();
+            var curT = -1;
+            a[0] = "把-你-的-鼠-标-拿-开（＞﹏＜）";
+            a[1] = "你……你的鼠标在干嘛（╬￣皿￣）凸";
+            a[2] = "喂，警察叔叔吗，这里有个变态";
+            a[3] = "鼠……鼠标放错地方了";
+            a[4] = "Hantai， 再点我就要报警了啊";
+            a[5] = "是……是不小心碰到的吧";
+            a[6] = "你看到我的小熊了吗"
+            var WaitTime;
+            function myFunction() {
+                var index = Math.floor(Math.random() * a.length);
+                while (index == curT) {
+                    index = Math.floor(Math.random() * a.length);
+                }
+                curT = index;
+                document.getElementById("sayhello").textContent = a[index];
+                document.getElementById("sayhello").style.display = "block";
+                clearTimeout(WaitTime);
+                WaitTime = setTimeout(() => {
+                    document.getElementById("sayhello").style.display = "none";
+                }, 1000);
+            }
+        </script>
+        <p id="sayhello" class="centers"
+            style="font-size: 15px; width: 170; height: 60px; background-color: rgba(255, 255, 255, 0.5); display: none; margin-top: 0px;">
+        </p>
+        <div class="live2d" onclick="myFunction()">
+        </div>
+    </div>
+
     <script type="text/javascript">
         var OriginTitile = document.title;
         var titleTime;
@@ -217,8 +278,8 @@
             },
             "display": {
                 "position": "right",
-                "width": 150,
-                "height": 300,
+                "width": 200,
+                "height": 400,
                 "hOffset": 0,
                 "vOffset": -20
             },
