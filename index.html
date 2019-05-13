@@ -1,7 +1,6 @@
 <html>
 
 <head>
-    <audio id="bgm" src="audio/bgm1.mp3" autoplay="autoplay" loop="loop" style="display: none;">
     </audio>
     <title>
         Mauve
@@ -193,26 +192,33 @@
         </p>
         <div>
             <div>
+                <audio id="bgm" src="audio/bgm1.mp3" autoplay="autoplay" loop="loop" style="display: none;"></audio>
                 <img id="musicicon" src="image/wangyiyunyinleclick.png" class="mute" onclick="muteorcontinue()" />
                 <script type="text/javascript">
                     var musicicon = document.getElementById("musicicon");
                     var startrotate = setInterval(function () { rotate() }, 1);
                     var curRotate = 0.0;
-                    function rotate() {
-                        curRotate += 0.2;
-                        musicicon.style.transform = "rotate(" + curRotate + "deg)";
-                    }
                     var Obj = document.getElementById("bgm");
-                    function muteorcontinue() {
-                        if (Obj.muted == false) {
-                            clearInterval(startrotate);
-                            Obj.muted = true;
-                            Obj.pause();
+                    function rotate() {
+                        if (Obj.paused == false && Obj.currentTime > 0) {
+                            curRotate += 0.1;
+                            musicicon.style.transform = "rotate(" + curRotate + "deg)";
+                            musicicon.style.filter = "grayscale(0%)";
                         }
                         else {
+                            musicicon.style.filter = "grayscale(30%)";
+                        }
+                    }
+                    function muteorcontinue() {
+                        if (Obj.paused) {
                             startrotate = setInterval(function () { rotate() }, 1);
                             Obj.muted = false;
                             Obj.play();
+                        }
+                        else {
+                            clearInterval(startrotate);
+                            Obj.muted = true;
+                            Obj.pause();
                         }
                     }
                 </script>
@@ -223,8 +229,8 @@
         <script type="text/javascript">
             var a = new Array();
             var curT = -1;
-            a[0] = "把-你-的-鼠-标-拿-开（＞﹏＜）";
-            a[1] = "你……你的鼠标在干嘛（╬￣皿￣）凸";
+            a[0] = '把-你-的-鼠-标-拿-开<br>（＞﹏＜）';
+            a[1] = "你……你的鼠标在干嘛<br>（╬￣皿￣）凸";
             a[2] = "喂，警察叔叔吗，这里有个变态";
             a[3] = "鼠……鼠标放错地方了";
             a[4] = "Hantai， 再点我就要报警了啊";
@@ -237,7 +243,7 @@
                     index = Math.floor(Math.random() * a.length);
                 }
                 curT = index;
-                document.getElementById("sayhello").textContent = a[index];
+                document.getElementById("sayhello").innerHTML = a[index];
                 document.getElementById("sayhello").style.display = "block";
                 clearTimeout(WaitTime);
                 WaitTime = setTimeout(() => {
