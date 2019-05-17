@@ -161,16 +161,15 @@ div.lists {
     width: 700pt;
     justify-content: center;
     display: flex;
-    margin: 0 auto;
+    margin: auto;
     padding-top: 30pt;
 }
-div.listlast {
-    width: 700pt;
-    padding-bottom: 300pt;
+div.forfun {
+    height: 300px;
+    padding-top: 100px;
     justify-content: center;
     display: flex;
-    margin: 0 auto;
-    padding-top: 30pt;
+    margin: auto;
 }
 div.live2d {
     position: fixed;

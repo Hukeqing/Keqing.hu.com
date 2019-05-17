@@ -1,0 +1,82 @@
+body {
+    cursor: url("../cursors/default.cur"), default;
+}
+div.main {
+    background-image: url("../image/background-image/bgi1.jpg");
+    background-repeat: no-repeat;
+    background-size: 1600px 900px;
+    position: fixed;
+    width: 1600px;
+    height: 900px;
+}
+
+div.button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+a.noline {
+    padding-top: 10px;
+    text-decoration: none;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: url("../cursors/pointer.cur"), default;
+}
+:link {
+    color: gray;
+}
+:visited {
+    color: gray;
+}
+:hover {
+    color: gray;
+}
+
+div.main span {
+    display: inline-flex;
+    width: 9.73%;
+    height: 9.73%;
+    background-color: white;
+    box-shadow: 0px 5px 5px gray;
+    /* animation: fall 5s infinite;
+    -webkit-animation: fall 2s linear forwards; */
+}
+
+span.fall {
+    display: inline-flex;
+    width: 9.73%;
+    height: 9.73%;
+    background-color: red;
+    z-index: 9999;
+    box-shadow: 0px 5px 5px gray;
+    animation: fall 5s infinite;
+    -webkit-animation: fall 2s linear forwards;
+}
+
+@keyframes fall
+{
+    0% {
+        background-color: red;
+        transform: translateY(0) rotate(0deg);
+        display: inline;
+    }
+    90% {
+        background-color: rgba(255, 0, 0, 0.3);
+        transform: translateY(1200px) rotate(30deg);
+        display: inline;
+    }
+    100% {
+        transform: translateY(1200px) rotate(30deg);
+        display: none;
+    }
+}
+
+@-webkit-keyframes fall
+{
+    0% {
+        transform: translateY(0) rotate(0deg)
+    }
+    100% {
+        transform: translateY(100px) rotate(30deg)
+    }
+}
