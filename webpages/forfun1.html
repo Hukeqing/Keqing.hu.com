@@ -9,14 +9,28 @@
 </head>
 
 <body>
+    <div class="button">
+        <a id="download" href="../image/background-image/bgi1.jpg" target="_blank" download="background.jpg"
+            class="noline">
+            下载
+        </a>
+        <br>
+        <a href="forfun1.html" class="noline">
+            刷新
+        </a>
+        <br>
+        <a href="../index.html" class="noline">
+            返回
+        </a>
+    </div>
     <div id="main" class="main">
         <script>
             var urls = new Array();
-            urls[0] = "url('../image/background-image/bgi1.jpg')";
-            urls[1] = "url('../image/background-image/bgi2.jpg')";
+            urls[0] = "../image/background-image/bgi1.jpg";
+            urls[1] = "../image/background-image/bgi2.jpg";
             var temp = Math.floor(Math.random() * urls.length);
-            document.getElementById("main").style.backgroundImage = urls[temp];
-            // document.getElementById("download").href = urls[temp];
+            document.getElementById("main").style.backgroundImage = "url(" + urls[temp] + ")";
+            document.getElementById("download").href = urls[temp];
             function onclicks(t) {
                 t.className = "fall"
             }
@@ -121,20 +135,6 @@
         <span onmouseover="onclicks(this)"></span>
         <span onmouseover="onclicks(this)"></span>
         <span onmouseover="onclicks(this)"></span>
-        </script>
-    </div>
-    <div class="button">
-        <a id="download" href="../image/background-image/bgi1.jpg" target="_blank" download="background.jpg" class="noline">
-            下载
-        </a>
-        <br>
-        <a href="forfun1.html" class="noline">
-            刷新
-        </a>
-        <br>
-        <a href="../index.html" class="noline">
-            返回
-        </a>        
     </div>
 </body>
 
