@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../css/animation.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/animation.css" type="text/css" media="all" />
     <title>
         For Fun
     </title>
@@ -10,7 +10,7 @@
 
 <body>
     <div class="button">
-        <a id="download" href="../image/background-image/bgi1.jpg" target="_blank" download="background.jpg"
+        <a id="download" href="background-image/bgi1.jpg" target="_blank" download="background.jpg"
             class="noline">
             下载
         </a>
@@ -19,15 +19,15 @@
             刷新
         </a>
         <br>
-        <a href="../index.html" class="noline">
+        <a href="../../index.html" class="noline">
             返回
         </a>
     </div>
     <div id="main" class="main">
         <script>
             var urls = new Array();
-            urls[0] = "../image/background-image/bgi1.jpg";
-            urls[1] = "../image/background-image/bgi2.jpg";
+            urls[0] = "background-image/bgi1.jpg";
+            urls[1] = "background-image/bgi2.jpg";
             var temp = Math.floor(Math.random() * urls.length);
             document.getElementById("main").style.backgroundImage = "url(" + urls[temp] + ")";
             document.getElementById("download").href = urls[temp];
