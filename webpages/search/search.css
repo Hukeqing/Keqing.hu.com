@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    animation: backgrounds 10s infinite alternate;
+    animation: backgrounds 30s infinite alternate;
 }
 
 @keyframes backgrounds {

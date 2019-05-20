@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="search.css" type="text/css" media="all" />
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <title>
-        超级搜索引擎
+        一个极简的搜索系统
     </title>
 </head>
 
@@ -36,20 +36,20 @@
             return object;
         }
         var SearchEg = new Array();
-        SearchEg[0] = createSearchEg("https://www.google.com/search?q=", "Google");
-        SearchEg[1] = createSearchEg("https://www.baidu.com/#ie={inputEncoding}&wd=", "Baidu");
+        SearchEg[0] = createSearchEg("https://www.google.com/search?q=", "Search in Google");
+        SearchEg[1] = createSearchEg("https://www.baidu.com/#ie={inputEncoding}&wd=", "Search in Baidu");
         SearchEg[2] = createSearchEg("https://translate.google.com/?source=osdd#auto|auto|", "Google Translate");
         SearchEg[3] = createSearchEg("https://fanyi.baidu.com/#auto/auto/", "Baidu Translate");
-        SearchEg[4] = createSearchEg("https://github.com/search?q=", "GitHub");
-        SearchEg[5] = createSearchEg("https://zh.cppreference.com/mwiki/index.php?search=", "CPP");
-        SearchEg[6] = createSearchEg("https://so.csdn.net/so/search/s.do?q=", "CSDN");
+        SearchEg[4] = createSearchEg("https://github.com/search?q=", "Search in GitHub");
+        SearchEg[5] = createSearchEg("https://zh.cppreference.com/mwiki/index.php?search=", "Search in CPP");
+        SearchEg[6] = createSearchEg("https://so.csdn.net/so/search/s.do?q=", "Search in CSDN");
         var curSearch = 0;
         function searchs() {
             But.href = SearchEg[curSearch].urls + Inp.value;
         }
         function changes() {
             curSearch = Sel.value;
-            Inp.placeholder = "Search in " + SearchEg[curSearch].search_engine;
+            Inp.placeholder = SearchEg[curSearch].search_engine;
         }
         document.onkeydown = function EnterPress(e) {
             if (e.keyCode == 13) {
