@@ -164,12 +164,14 @@ div.lists {
     margin: auto;
     padding-top: 30pt;
 }
-div.forfun {
+div.Extra {
     height: 300px;
     padding-top: 100px;
-    justify-content: center;
+}
+div.Buttons {
     display: flex;
     margin: auto;
+    justify-content: center;
 }
 div.live2d {
     position: fixed;
