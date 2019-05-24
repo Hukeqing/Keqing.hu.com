@@ -75,6 +75,9 @@
         SearchEg[7] = createSearchEg("https://search.bilibili.com/all?keyword=", "哔哩哔哩 (゜-゜)つロ 干杯~");
         var curSearch = 0;
         function searchs() {
+            if (curSearch == 0 && Inp.value == "彩蛋") {
+                window.alert("暂停时点击背景图片上的‘auve’字样，然后输掉那场游戏即可触发彩蛋！");
+            }
             But.href = SearchEg[curSearch].urls + Inp.value;
         }
         function changes() {
