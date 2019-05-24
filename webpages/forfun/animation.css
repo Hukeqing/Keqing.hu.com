@@ -72,11 +72,19 @@ span.fall {
 }
 
 @-webkit-keyframes fall
-{
+{    
     0% {
-        transform: translateY(0) rotate(0deg)
+        background-color: red;
+        transform: translateY(0) rotate(0deg);
+        display: inline;
+    }
+    90% {
+        background-color: rgba(255, 0, 0, 0.3);
+        transform: translateY(1200px) rotate(30deg);
+        display: inline;
     }
     100% {
-        transform: translateY(100px) rotate(30deg)
+        transform: translateY(1200px) rotate(30deg);
+        display: none;
     }
 }
