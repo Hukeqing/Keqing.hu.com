@@ -19,6 +19,7 @@
             <option value="4">GitHub</option>
             <option value="5">CPP</option>
             <option value="6">CSDN</option>
+            <option value="7">哔哩哔哩</option>
         </select>
         <input id="input" class="search-txt" type="text" name="" placeholder="Search in Google">
         <a id="button" class="search-btn" href="" target="_blank" onclick="searchs()">
@@ -71,6 +72,7 @@
         SearchEg[4] = createSearchEg("https://github.com/search?q=", "Search in GitHub");
         SearchEg[5] = createSearchEg("https://zh.cppreference.com/mwiki/index.php?search=", "Search in CPP");
         SearchEg[6] = createSearchEg("https://so.csdn.net/so/search/s.do?q=", "Search in CSDN");
+        SearchEg[7] = createSearchEg("https://search.bilibili.com/all?keyword=", "Search in Bilibili");
         var curSearch = 0;
         function searchs() {
             But.href = SearchEg[curSearch].urls + Inp.value;
