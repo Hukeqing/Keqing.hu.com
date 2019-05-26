@@ -39,7 +39,7 @@ div.main span {
     background-color: white;
     box-shadow: 0px 5px 5px gray;
     /* animation: fall 5s infinite;
-    -webkit-animation: fall 2s linear forwards; */
+    -webkit-animation: fall 5s linear forwards; */
 }
 
 span.fall {
@@ -49,8 +49,8 @@ span.fall {
     background-color: red;
     z-index: 100;
     box-shadow: 0px 5px 5px gray;
-    animation: fall 5s linear forwards;
-    -webkit-animation: fall 2s linear forwards;
+    animation: fall 3s linear forwards;
+    -webkit-animation: fall 3s linear forwards;
 }
 
 @keyframes fall
@@ -59,24 +59,40 @@ span.fall {
         background-color: red;
         transform: translateY(0) rotate(0deg);
         display: inline;
+        box-shadow: 0px 5px 5px gray;
     }
     90% {
         background-color: rgba(255, 0, 0, 0.3);
         transform: translateY(1200px) rotate(30deg);
         display: inline;
+        box-shadow: 0px 5px 5px gray;
     }
     100% {
+        background-color: rgba(255, 0, 0, 0);
         transform: translateY(1200px) rotate(30deg);
         display: none;
+        box-shadow: 0px 0px 0px gray;
     }
 }
 
 @-webkit-keyframes fall
-{
+{    
     0% {
-        transform: translateY(0) rotate(0deg)
+        background-color: red;
+        transform: translateY(0) rotate(0deg);
+        display: inline;
+        box-shadow: 0px 5px 5px gray;
+    }
+    90% {
+        background-color: rgba(255, 0, 0, 0.3);
+        transform: translateY(1200px) rotate(30deg);
+        display: inline;
+        box-shadow: 0px 5px 5px gray;
     }
     100% {
-        transform: translateY(100px) rotate(30deg)
+        background-color: rgba(255, 0, 0, 0);
+        transform: translateY(1200px) rotate(30deg);
+        display: none;
+        box-shadow: 0px 0px 0px gray;
     }
 }
