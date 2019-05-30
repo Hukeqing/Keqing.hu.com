@@ -5,7 +5,7 @@ body {
     background: rgba(255,255,255);
     font-family: 'Raleway', sans-serif;
     scroll-behavior: smooth;
-    cursor: url("../cursors/default.cur"),default;
+    cursor: url("cursors/default.cur"),default;
 }
 h1.main {
     display: block;
@@ -90,7 +90,7 @@ p.indent {
 }
 a.noline {
     text-decoration: none;
-    cursor: url("../cursors/pointer.cur"), default;
+    cursor: url("cursors/pointer.cur"), default;
 }
 :link {
     color: blue;
@@ -179,7 +179,7 @@ div.live2d {
     width: 130px;
     height: 250px;
     bottom: 50px;
-    cursor: url("../cursors/Busy.ani"), url("../cursors/pointer.cur"), default;
+    cursor: url("cursors/Busy.ani"), url("cursors/pointer.cur"), default;
 }
 div.comment {
     position: fixed;
@@ -213,7 +213,7 @@ img.centerandbroder {
     border-style: dotted;
     border-color: blue;
     background-color: rgba(0, 70, 255, 0.5);
-    cursor: url("../cursors/pointer.cur"), default;
+    cursor: url("cursors/pointer.cur"), default;
 }
 
 img.lists {
@@ -232,7 +232,7 @@ img.mute {
     transform: rotate(0deg);
     -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
     filter: grayscale(0%);
-    cursor: url("../cursors/Alternate.cur"), default;
+    cursor: url("cursors/Alternate.cur"), default;
 }
 button {
     width: 150px;
@@ -241,7 +241,7 @@ button {
     margin-right: 5px;
     border-style: dotted;
     background-color: blue;
-    cursor: url("../cursors/pointer.cur"), default;
+    cursor: url("cursors/pointer.cur"), default;
 }
 :hover {
     color: aqua;
