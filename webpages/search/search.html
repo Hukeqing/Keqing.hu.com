@@ -17,9 +17,11 @@
             <option value="2">谷歌翻译</option>
             <option value="3">百度翻译</option>
             <option value="4">GitHub</option>
-            <option value="5">CPP</option>
-            <option value="6">CSDN</option>
-            <option value="7">哔哩哔哩</option>
+            <option value="5">哔哩哔哩</option>
+            <option value="6">维基百科</option>
+            <option value="7">Wikipedia</option>
+            <option value="8">CSDN</option>
+            <option value="9">CPP</option>
         </select>
         <input id="input" class="search-txt" type="text" name="" placeholder="Search in Google">
         <a id="button" class="search-btn" href="" target="_blank" onclick="searchs()">
@@ -70,9 +72,11 @@
         SearchEg[2] = createSearchEg("https://translate.google.com/?source=osdd#auto|auto|", "Google Translate");
         SearchEg[3] = createSearchEg("https://fanyi.baidu.com/#auto/auto/", "Baidu Translate");
         SearchEg[4] = createSearchEg("https://github.com/search?q=", "Search in GitHub");
-        SearchEg[5] = createSearchEg("https://zh.cppreference.com/mwiki/index.php?search=", "Search in CPP");
-        SearchEg[6] = createSearchEg("https://so.csdn.net/so/search/s.do?q=", "Search in CSDN");
-        SearchEg[7] = createSearchEg("https://search.bilibili.com/all?keyword=", "哔哩哔哩 (゜-゜)つロ 干杯~");
+        SearchEg[5] = createSearchEg("https://search.bilibili.com/all?keyword=", "哔哩哔哩 (゜-゜)つロ 干杯~");
+        SearchEg[6] = createSearchEg("https://zh.wikipedia.org/wiki/", "维基百科-中文");
+        SearchEg[7] = createSearchEg("https://en.wikipedia.org/wiki/", "Wikipedia-English");
+        SearchEg[8] = createSearchEg("https://so.csdn.net/so/search/s.do?q=", "Search in CSDN");
+        SearchEg[9] = createSearchEg("https://zh.cppreference.com/mwiki/index.php?search=", "Search in CPP");
         var curSearch = 0;
         function searchs() {
             if (curSearch == 4 && Inp.value == "彩蛋") {
