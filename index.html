@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="image/shubiaoxuanzezhuangtai.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -121,35 +121,38 @@
             <h1 class="titles">
                 Superior Tower Defence
             </h1>
-            <script>
-                $.ajax({
-                    url: 'https://api.github.com/repos/Hukeqing/Superior-Tower-Defence/releases/latest',
-                    type: 'get',
-                    success: function (response) {
-                        downloadurl = "https://github.com/Hukeqing/Superior-Tower-Defence/releases/download/" + response.tag_name + "/Superior.Tower.Defence.rar";
-                        document.getElementById("downloadlinked").innerHTML = "下载链接"
-                        document.getElementById("downloadlinked").href = downloadurl;
-                    }
-                });
-                function downloadstart() {
-                    if (document.getElementById("downloadlinked").href != "#") {
-                        document.getElementById("downloadlinked").innerHTML = "正在下载";
-                    }
-                    else {
-                        window.alert("正在检查最新版本的游戏文件");
-                    }
-                }
-            </script>
             <h1 class="main">
                 <a href="https://fragrant111.github.io/Superior-Tower-Defence.com" target="_blank" class="noline">
                     前往官网
                 </a>
-                <a href="#" class="noline" id="downloadlinked" onclick="downloadstart()">
-                    检查版本
+                <a href="index.html#" class="noline" id="downloadlinked" onclick="downloadstart()">
+                    请稍后..
                 </a>
                 <a href="https://github.com/Hukeqing/Superior-Tower-Defence" target="_blank" class="noline">
                     获取源码
                 </a>
+                <script>
+                    downloadlink = document.getElementById("downloadlinked");
+                    lasthref = downloadlink.href;
+                    console.log(downloadlink.href);
+                    $.ajax({
+                        url: 'https://api.github.com/repos/Hukeqing/Superior-Tower-Defence/releases/latest',
+                        type: 'get',
+                        success: function (response) {
+                            downloadurl = "https://github.com/Hukeqing/Superior-Tower-Defence/releases/download/" + response.tag_name + "/Superior.Tower.Defence.rar";
+                            downloadlink.innerHTML = "下载链接"
+                            downloadlink.href = downloadurl;
+                        }
+                    });
+                    function downloadstart() {
+                        if (downloadlink.href != lasthref) {
+                            downloadlink.innerHTML = "正在下载";
+                        }
+                        else {
+                            window.alert("正在检查最新版本的游戏文件");
+                        }
+                    }
+                </script>
             </h1>
         </div>
     </div>
