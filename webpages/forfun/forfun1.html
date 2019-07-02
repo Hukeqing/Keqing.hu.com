@@ -10,16 +10,16 @@
 
 <body>
     <div class="button">
+        <!-- 下载 -->
         <a id="download" href="" target="_blank" download="background.jpg" class="noline">
-            下载
+            <img src="image/downloads.png" width="100px" height="100px" />
         </a>
-        <br>
         <a href="forfun1.html" class="noline">
-            刷新
+            <img src="image/abr.png" width="100px" height="100px" />
         </a>
         <br>
-        <iframe name="bgm" id="bgm" frameborder="no" border="0" marginwidth="0" marginheight="0" width=260 height=86
-            src="https://music.163.com/outchain/player?type=2&id=26131698&auto=1&height=66"></iframe>
+        <div id="bgm">
+        </div>
         <script>
             var browser = {
                 versions: function () {
@@ -45,7 +45,6 @@
             if (browser.versions.mobile || browser.versions.ios || browser.versions.android ||
                 browser.versions.iPhone || browser.versions.iPad) {
                 alert("建议使用PC访问来获取最佳体验");
-                // window.location = "m.zhaizhainv.com";
             }
         </script>
     </div>
@@ -63,118 +62,130 @@
             document.getElementById("main").style.backgroundImage = "url(" + BGIurls[temp] + ")";
             document.getElementById("download").href = BGIurls[temp];
 
-            // var BGMurls = new Array();
-            // BGMurls[0] = 26131698;
-            // BGMurls[0] = 559869;
-            // var temp = Math.floor(Math.random() * BGMurls.length);
-            // document.getElementById("bgm").scr = "https://music.163.com/outchain/player?type=2&id=" + BGMurls[temp] + "&auto=1&height=66";
-            // window.parent.frames.bgm.location.reload()
+            front = '<iframe name="bgm" id="bgm" frameborder="no" border="0" src="https://music.163.com/outchain/player?type=2&id='
+            end = '&auto=1&height=66" marginwidth="0" marginheight="0" width=260 height=86></iframe>'
+            var BGMurls = new Array();
+            BGMurls[0] = 26131698;
+            BGMurls[1] = 559869;
+            var temp = Math.floor(Math.random() * BGMurls.length);
+            text = front + BGMurls[temp] + end;
+            document.getElementById("bgm").innerHTML = text;
+
             function onclicks(t) {
                 t.className = "fall"
             }
         </script>
         <div>
             <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
-            <span onmouseover="onclicks(this)"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
+            <span onmouseover="onclicks(this)" id="sp"></span>
         </div>
+        <script>
+            var isChrome = (window.navigator.userAgent.indexOf("Chrome") !== -1 && window.navigator.userAgent.indexOf("Edge") <= -1);
+            if (isChrome) {
+                ls = document.getElementsByTagName("span");
+                for (var i = 0; i < ls.length; i++) {
+                    ls[i].style.marginLeft = "-3px";
+                }
+            }
+        </script>
     </div>
 </body>
 
