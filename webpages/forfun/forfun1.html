@@ -65,11 +65,12 @@
             front = '<iframe name="bgm" id="bgm" frameborder="no" border="0" src="https://music.163.com/outchain/player?type=2&id='
             end = '&auto=1&height=66" marginwidth="0" marginheight="0" width=260 height=86></iframe>'
             var BGMurls = new Array();
-            BGMurls[0] = 26131698;
-            BGMurls[1] = 559869;
-            BGMurls[2] = 515538813;
-            BGMurls[3] = 26131739;
-            BGMurls[4] = 26131681;
+            BGMurls[0] = 26131698;  // 恋文
+            BGMurls[1] = 559869;    // Love letter
+            BGMurls[2] = 515538813; // 潮鸣り
+            BGMurls[3] = 26131739;  // Philosophy of yours
+            BGMurls[4] = 26131681;  // 旅
+            BGMurls[5] = 4966650;   // ラムネ79 ver.2
             var temp = Math.floor(Math.random() * BGMurls.length);
             text = front + BGMurls[temp] + end;
             document.getElementById("bgm").innerHTML = text;
