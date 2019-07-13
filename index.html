@@ -55,7 +55,12 @@
                 </h1>
             </button>
         </div>
-
+        <div id="normal" class="centerss" style="display:block">
+            <br>
+            <div class="centerss">
+                <img src="https://apa.me/news/" />
+            </div>
+        </div>
         <div id="select1" class="centerss" style="display:none">
             <h2 class="titles">
                 I am
@@ -71,8 +76,7 @@
                 拥有4年以上的程序学习与实践经历
             </p>
             <h2 class="titles">
-                <a class="noline" href="https://hukeqing.github.io/"
-                    target="_blank">
+                <a class="noline" href="https://hukeqing.github.io/" target="_blank">
                     TO：我的博客
                 </a>
             </h2>
@@ -115,6 +119,7 @@
         </div>
         <script type="text/javascript">
             function getclick(id) {
+                document.getElementById("normal").style.display = "none";
                 document.getElementById("select1").style.display = "none";
                 document.getElementById("select2").style.display = "none";
                 document.getElementById("select3").style.display = "none";
@@ -245,7 +250,8 @@
         </p>
         <div>
             <div>
-                <audio id="bgm" src="http://music.163.com/song/media/outer/url?id=26131698.mp3" autoplay="autoplay" loop="loop" style="display: none;"></audio>
+                <audio id="bgm" src="http://music.163.com/song/media/outer/url?id=26131698.mp3" autoplay="autoplay"
+                    loop="loop" style="display: none;"></audio>
                 <img id="musicicon" src="image/wangyiyunyinleclick.png" class="mute" onclick="muteorcontinue()" />
                 <script type="text/javascript">
                     var musicicon = document.getElementById("musicicon");
