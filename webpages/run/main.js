@@ -10,3 +10,21 @@ function getclick(id) {
         curitem = id;
     }, 500);
 }
+
+window.onresize = function () {
+    startresize();
+}
+function startresize() {
+    var curWidth = document.body.clientWidth - 100;
+    var curheight = document.body.clientWidth - 40;
+    if (curheight * 2.5 >= curWidth) {
+        curheight = curWidth / 2.5;
+    } else {
+        curWidth = curheight * 2.5;
+    }
+    var items = document.getElementsByTagName("img");
+    for (var i = 0; i < items.length; i++) {
+        items[i].style.width = curWidth.toString() + "px";
+        items[i].style.height = curheight.toString() + "px";
+    }
+}
