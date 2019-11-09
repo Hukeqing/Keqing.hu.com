@@ -1,13 +1,26 @@
 /* img */
 div.maindiv {
-    opacity: 0;
-    transition: 1s;
+    animation: selected 1s infinite forwards;
+    -webkit-animation: selected 1s linear forwards;
+}
+div.unmaindiv {
+    animation: unselected 0.5s infinite forwards;
+    -webkit-animation: unselected 0.5s linear forwards;
+}
+div.startdiv {
+    display: none;
 }
 img.main {
     display: block;
     position: fixed;
     width: 1800px;
-    height: 800px;
+    height: 750px;
+}
+p.centerss {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    text-align: center;
 }
 /* button */
 h1.buttons {
@@ -47,4 +60,41 @@ p.centers {
 a.noline {
     text-decoration: none;
     cursor: url("../../cursors/pointer.cur"), default;
+}
+
+@keyframes selected
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes selected
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes unselected {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes unselected {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
