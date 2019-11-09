@@ -15,8 +15,8 @@ window.onresize = function () {
     startresize();
 }
 function startresize() {
-    var curWidth = document.body.clientWidth - 100;
-    var curheight = document.body.clientWidth - 40;
+    var curWidth = document.body.clientWidth - 20;
+    var curheight = document.body.clientHeight - 120;
     if (curheight * 2.5 >= curWidth) {
         curheight = curWidth / 2.5;
     } else {
