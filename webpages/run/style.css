@@ -1,0 +1,50 @@
+/* img */
+div.maindiv {
+    opacity: 0;
+    transition: 1s;
+}
+img.main {
+    display: block;
+    position: fixed;
+    width: 1800px;
+    height: 800px;
+}
+/* button */
+h1.buttons {
+    display: block;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 15px;
+}
+
+button {
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: dotted;
+    background-color: blue;
+    cursor: url("../../cursors/pointer.cur"), default;
+}
+/* footer */
+div.footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.8)
+}
+p.centers {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20pt;
+    font-weight: 700;
+    text-align: center;
+}
+a.noline {
+    text-decoration: none;
+    cursor: url("../../cursors/pointer.cur"), default;
+}
