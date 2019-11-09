@@ -1,3 +1,22 @@
+/* other */
+body.pb {
+    background: -webkit-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* 标准的语法（必须放在最后） */
+}
+h1.main {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 50pt;
+    text-align: center;
+    text-shadow: 5px 5px 5px #FFFF70;
+}
+h2.main {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 30pt;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(255, 0, 0);
+}
 /* img */
 div.maindiv {
     animation: selected 1s infinite forwards;
@@ -29,16 +48,18 @@ h1.buttons {
     font-weight: bolder;
     text-transform: uppercase;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 button {
-    width: 200px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-family: "微软正黑体";
+    /* width: 130px; */
     margin-top: 10px;
     margin-left: 5px;
     margin-right: 5px;
     border-style: dotted;
-    background-color: blue;
+    background-color: rgb(135, 155, 255);
     cursor: url("../../cursors/pointer.cur"), default;
 }
 /* footer */
@@ -47,18 +68,18 @@ div.footer {
     left: 0px;
     bottom: 0px;
     width: 100%;
-    height: 100px;
+    height: 80px;
     z-index: 9999;
     background-color: rgba(255, 255, 255, 0.5)
 }
 p.centers {
-    font-family: 'Raleway', sans-serif;
-    font-size: 20pt;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14pt;
     font-weight: 700;
     text-align: center;
 }
 h1.centers {
-    font-family: 'Raleway', sans-serif;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 50pt;
     font-weight: 700;
     text-align: center;

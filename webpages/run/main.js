@@ -2,13 +2,22 @@ var curitem = "source"
 
 function getclick(id) {
     if (id == curitem) return;
-    document.getElementById(curitem).className = "unmaindiv";
+    var preItem = document.getElementById(curitem);
+    var nexItem = document.getElementById(id);
+    var wait = 0;
+    if (preItem != null) {
+        preItem.className = "unmaindiv";
+        wait = 500;
+    }
     setTimeout(function () {
-        document.getElementById(curitem).style.display = "none";
-        document.getElementById(id).style.display = "block";
-        document.getElementById(id).className = "maindiv";
+        if (preItem != null)
+            preItem.style.display = "none";
+        if (nexItem != null) {
+            nexItem.style.display = "block";
+            nexItem.className = "maindiv";
+        }
         curitem = id;
-    }, 500);
+    }, wait);
 }
 
 window.onresize = function () {
