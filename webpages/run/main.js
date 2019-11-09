@@ -1,6 +1,7 @@
 var curitem = "source"
 
 function getclick(id) {
+    if (id == curitem) return;
     document.getElementById(curitem).className = "unmaindiv";
     setTimeout(function () {
         document.getElementById(curitem).style.display = "none";

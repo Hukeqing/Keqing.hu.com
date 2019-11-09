@@ -57,6 +57,12 @@ p.centers {
     font-weight: 700;
     text-align: center;
 }
+h1.centers {
+    font-family: 'Raleway', sans-serif;
+    font-size: 50pt;
+    font-weight: 700;
+    text-align: center;
+}
 a.noline {
     text-decoration: none;
     cursor: url("../../cursors/pointer.cur"), default;
