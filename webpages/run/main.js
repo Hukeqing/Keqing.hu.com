@@ -1,7 +1,9 @@
 var curitem = "source"
+var flag = true;
 
 function getclick(id) {
-    if (id == curitem) return;
+    if (id == curitem || !flag) return;
+    flag = false;
     var preItem = document.getElementById(curitem);
     var nexItem = document.getElementById(id);
     var wait = 0;
@@ -16,6 +18,7 @@ function getclick(id) {
             nexItem.style.display = "block";
             nexItem.className = "maindiv";
         }
+        flag = true;
         curitem = id;
     }, wait);
 }

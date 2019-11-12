@@ -6,13 +6,15 @@ body.pb {
     background: linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* 标准的语法（必须放在最后） */
 }
 h1.main {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    font-family: PingFang;
     font-size: 50pt;
     text-align: center;
     text-shadow: 5px 5px 5px #FFFF70;
 }
 h2.main {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    font-family: PingFang;
     font-size: 30pt;
     text-align: center;
     text-shadow: 3px 3px 3px rgb(255, 0, 0);
@@ -36,26 +38,28 @@ img.main {
     height: 720px;
 }
 p.centerss {
-    font-family: 'Raleway', sans-serif;
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: PingFang;
     font-size: 10pt;
     font-weight: 700;
     text-align: center;
 }
 /* button */
 h1.buttons {
+    font-family: PingFang;
     display: block;
     letter-spacing: 1px;
     font-weight: bolder;
     text-transform: uppercase;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 button {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-family: "微软正黑体";
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    /* font-family: "微软正黑体"; */
     /* width: 130px; */
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
     border-style: dotted;
@@ -73,13 +77,15 @@ div.footer {
     background-color: rgba(255, 255, 255, 0.5)
 }
 p.centers {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    font-family: PingFang;
     font-size: 14pt;
     font-weight: 700;
     text-align: center;
 }
 h1.centers {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    font-family: PingFang;
     font-size: 50pt;
     font-weight: 700;
     text-align: center;
@@ -124,4 +130,8 @@ a.noline {
     100% {
         opacity: 0;
     }
+}
+@font-face {
+    font-family: PingFang;
+    src: url(../../fonts/苹方黑体-中黑-简.ttf)
 }
