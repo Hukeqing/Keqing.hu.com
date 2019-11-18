@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        英语36秒
+    </title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-ico" href="favicon.ico" />
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <div class="te">
+        <div>
+            <p id="0">
+            </p>
+            <p id="1">
+            </p>
+            <p id="2">
+            </p>
+            <p id="3">
+            </p>
+            <p id="4">
+            </p>
+            <p id="5">
+            </p>
+        </div>
+    </div>
+    <div class="search-box">
+        <fieldset>
+            造句涵盖：
+            <label><input name="che" type="checkbox" value="0" checked />Unit 1</label>
+            <label><input name="che" type="checkbox" value="1" checked />Unit 2</label>
+            <label><input name="che" type="checkbox" value="2" checked />Unit 3</label>
+            <label><input name="che" type="checkbox" value="3" checked />Unit 4</label>
+            <label><input name="che" type="checkbox" value="4" checked />Unit 5</label>
+            <br>
+            翻译涵盖：
+            <select name="cl" id="selects" class="search-sel">
+                <option value="0" selected>前</option>
+                <option value="1">后</option>
+            </select>
+            <input type="text" id="lens" class="search-txt" name="num" value="30" maxlength="2">组（共30组）
+        </fieldset>
+    </div>
+    <div class="main">
+        <button class="main" onclick="rand()" id="next">随机一组</button>
+    </div>
+    <div class="footer">
+        <p class="centers">
+            Copyright &copy; 2019.Mauve All rights reserved.
+            <br>
+            联系我<a href="mailto:keqing.hu@icloud.com?Subject=Hello%20Mauve" class="noline">keqing.hu@icloud.com</a>
+        </p>
+    </div>
+    <script>
+        init();
+    </script>
+</body>
+
+</html>
