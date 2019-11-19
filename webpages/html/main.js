@@ -134,9 +134,6 @@ function randomNum(minNum, maxNum) {
 }
 function rand() {
     clearTimeout(timeable);
-    document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-    document.getElementById("next").innerHTML = "换一组";
-    document.getElementById("next").style.backgroundColor = "buttonface";
     // SentenceMaking
     var check = document.getElementsByName("che");
     var unit = new Array();
@@ -150,6 +147,9 @@ function rand() {
         window.alert("出错啦，必须要选择一个单元啦");
         return;
     }
+    document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+    document.getElementById("next").innerHTML = "换一组";
+    document.getElementById("next").style.backgroundColor = "buttonface";
     // console.log(unit);
     while (curList.length < 4) {
         var tmp = parseInt(unit[randomNum(0, unit.length - 1)]);

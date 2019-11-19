@@ -1,0 +1,14 @@
+/* other */
+body.pb {
+    font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    background: -webkit-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(255, 0, 255, 0.5), rgba(70, 70, 255, 0.5)); /* 标准的语法（必须放在最后） */
+}
+h1.main {
+    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
+    font-size: 30pt;
+    text-align: center;
+    text-shadow: 5px 5px 5px #FFFF70;
+}
