@@ -1,7 +1,15 @@
 var SentenceMaking = new Array();
 var Translate = new Array();
+var TopicList = new Array();
 var SentenceMakingDiv = new Array();
 var timeable;
+var time_log;
+var timeMax;
+var curMode;
+var lastSecond;
+var flushWaitTime = 0.01;
+var hidesStatus = false;
+var radialObj;
 function init() {
     SentenceMakingDiv[0] = 0;
     //  1	Leisure activities
@@ -117,6 +125,17 @@ function init() {
     Translate[28] = "我国仍处于并将长期处于社会主义初级阶段。";
     Translate[29] = "推进“一带一路”建设，是加强和世界各国互利合作的需要。";
     Translate[30] = "人民健康是民族昌盛和国家富强的重要标志。";
+    // topic
+    TopicList[1] = "What is your favorite leisure activity and why do you like it so much?";
+    TopicList[2] = "What is the power of humor and can you give any advice on how to be a humorous person?";
+    TopicList[3] = "Can you use examples to illustrate the power of words";
+    TopicList[4] = "Is letter writing better than calling? Why?";
+    TopicList[5] = "How does Chinese culture affect gender roles?";
+    TopicList[6] = "Which one would you prefer to be taught in, single-sex class or co-educational one? Why?"
+    TopicList[7] = "What can parents do at home to encourage a child’s creativity?"
+    TopicList[8] = "Which should be emphasized in education, knowledge or creativity?"
+    TopicList[9] = "Do you consider star athletes good role models for young people? Why or why not?";
+    TopicList[10] = "Star athletes now have not only acquired fame, but also made a lot of money. Do they deserve so much?";
 }
 // [minNum, maxNum]
 function randomNum(minNum, maxNum) {
@@ -132,73 +151,102 @@ function randomNum(minNum, maxNum) {
             break;
     }
 }
-function rand() {
-    clearTimeout(timeable);
+function rand(mode) {
     // SentenceMaking
     var check = document.getElementsByName("che");
     var unit = new Array();
     var curList = new Array();
     for (var i = 0; i < check.length; i++) {
         if (check[i].checked) {
-            unit.push(check[i].value);
+            unit.push(parseInt(check[i].value));
         }
     }
     if (unit.length == 0) {
         window.alert("出错啦，必须要选择一个单元啦");
         return;
     }
-    document.getElementsByTagName("body")[0].style.backgroundColor = "white";
-    document.getElementById("next").innerHTML = "换一组";
-    document.getElementById("next").style.backgroundColor = "buttonface";
-    // console.log(unit);
-    while (curList.length < 4) {
+    clearInterval(timeable);
+    for (var i = 0; i < 6; ++i) {
+        document.getElementById(i.toString()).innerHTML = "";
+    }
+    time_log = 0;
+    curMode = mode;
+    if (mode == 'topicButton') {
+        document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+        document.getElementById("next").innerHTML = "36秒";
+        document.getElementById("next").style.backgroundColor = "rgb(0, 0, 255)";
+        document.getElementById("topicButton").innerHTML = "换一组";
+        document.getElementById("topicButton").style.backgroundColor = "buttonface";
+        timeMax = parseInt(document.getElementById("people").value) * 45;
         var tmp = parseInt(unit[randomNum(0, unit.length - 1)]);
-        var temp = randomNum(SentenceMakingDiv[tmp] + 1, SentenceMakingDiv[tmp + 1]);
-        // console.log(temp);
-        if (!curList.includes(temp))
-            curList.push(temp);
-    }
-    for (var i = 0; i < 4; i++)
-        document.getElementById(i.toString()).innerHTML = SentenceMaking[curList[i]];
-
-    // Translate
-    lens = document.getElementById("lens");
-    lens.value = parseInt(lens.value);
-    if (lens.value <= 1)
-        lens.value = 2;
-    else if (lens.value > 30 || lens.value == "NaN")
-        lens.value = 30;
-    // console.log(lens.value)
-    var minn = 1;
-    var maxn = 30;
-    if (document.getElementById("selects").value == 0) {
-        maxn = parseInt(lens.value);
+        var temp = randomNum(unit[tmp] * 2 + 1, unit[tmp] * 2 + 2);
+        console.log(temp);
+        document.getElementById("0").innerHTML = TopicList[temp];
     } else {
-        minn = 30 - parseInt(lens.value) + 1;
-    }
-    curList.push(randomNum(minn, maxn));
-    while (true) {
-        var temp = randomNum(minn, maxn);
-        if (temp != curList[4]) {
-            curList.push(temp);
-            break;
+        document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+        document.getElementById("next").innerHTML = "换一组";
+        document.getElementById("next").style.backgroundColor = "buttonface";
+        document.getElementById("topicButton").innerHTML = "Topic";
+        document.getElementById("topicButton").style.backgroundColor = "rgb(0, 0, 255)";
+        timeMax = 36;
+        // console.log(unit);
+        while (curList.length < 4) {
+            var tmp = parseInt(unit[randomNum(0, unit.length - 1)]);
+            var temp = randomNum(SentenceMakingDiv[unit[tmp]] + 1, SentenceMakingDiv[unit[tmp] + 1]);
+            // console.log(temp);
+            if (!curList.includes(temp))
+                curList.push(temp);
         }
+        for (var i = 0; i < 4; i++)
+            document.getElementById(i.toString()).innerHTML = SentenceMaking[curList[i]];
+
+        // Translate
+        lens = document.getElementById("lens");
+        lens.value = parseInt(lens.value);
+        if (lens.value <= 1)
+            lens.value = 2;
+        else if (lens.value > 30 || lens.value == "NaN")
+            lens.value = 30;
+        // console.log(lens.value)
+        var minn = 1;
+        var maxn = 30;
+        if (document.getElementById("selects").value == 0) {
+            maxn = parseInt(lens.value);
+        } else {
+            minn = 30 - parseInt(lens.value) + 1;
+        }
+        curList.push(randomNum(minn, maxn));
+        while (true) {
+            var temp = randomNum(minn, maxn);
+            if (temp != curList[4]) {
+                curList.push(temp);
+                break;
+            }
+        }
+        document.getElementById("4").innerHTML = Translate[curList[4]];
+        document.getElementById("5").innerHTML = Translate[curList[5]];
+        console.log(curList);
+        // timeable = setTimeout("endTime();", 36000);
     }
-    document.getElementById("4").innerHTML = Translate[curList[4]];
-    document.getElementById("5").innerHTML = Translate[curList[5]];
-    console.log(curList);
-    timeable = setTimeout("endTime();", 36000);
+    radialObj.value(time_log / timeMax);
+    timeable = setInterval(function () {
+        time_log++;
+        radialObj.value(time_log / timeMax);
+        if (time_log >= timeMax) {
+            endTime();
+        }
+    }, 1000);
 }
 function endTime() {
+    clearInterval(timeable);
     document.getElementsByTagName("body")[0].style.backgroundColor = "#2f3640";
-    document.getElementById("next").innerHTML = "时间到";
-    document.getElementById("next").style.backgroundColor = "red";
+    document.getElementById(curMode).innerHTML = "时间到";
+    document.getElementById(curMode).style.backgroundColor = "red";
 }
 function changeFontSize() {
     for (var i = 0; i < 6; i++)
         document.getElementById(i.toString()).style.fontSize = document.getElementById("slider").value.toString() + "px";
 }
-var hidesStatus = false;
 function hides() {
     hidesStatus = !hidesStatus;
     if (hidesStatus) {
@@ -212,5 +260,36 @@ function hides() {
         document.getElementById("modeSel").style.opacity = "1";
         document.getElementById("buttons").style.bottom = "30%";
         document.getElementById("hide").innerHTML = "隐藏";
+    }
+}
+function startClock() {
+    // 定义时钟
+    radialObj = radialIndicator('#clock', {
+        radius: 60,
+        barWidth: 15,
+        barColor: '#FF0000',
+        minValue: 0,
+        maxValue: 1,
+        // fontWeight: 'normal',
+        fontWeight: '700',
+        roundCorner: true,
+        format: function (value) {
+            if ((timeMax - time_log).toString() == "NaN")
+                return "Ready";
+            else
+                return (timeMax - time_log).toString();
+        }
+    });
+}
+function showTime() {
+    if (document.getElementById("timeShow").checked)
+        document.getElementById("clock").style.opacity = 1;
+    else
+        document.getElementById("clock").style.opacity = 0;
+}
+window.ontouchmove = function (event) {
+    // console.log(event.target.id);
+    if (event.target.id == "slider") {
+        changeFontSize();
     }
 }

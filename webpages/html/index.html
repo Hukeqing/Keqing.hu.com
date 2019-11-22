@@ -7,6 +7,8 @@
     </title>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-ico" href="favicon.ico" />
+    <script type="text/javascript" src="angular.radialIndicator.js"></script>
+    <script type="text/javascript" src="radialIndicator.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/checkbox.css" type="text/css" media="all" />
@@ -29,41 +31,54 @@
             </p>
         </div>
     </div>
-    <div class="mode-box" id="modeSel">
-        <fieldset>
-            造句/小组讨论（暂未上线）涵盖：
-            <label><input name="che" type="checkbox" value="0" checked />Unit 1</label>
-            <label><input name="che" type="checkbox" value="1" checked />Unit 2</label>
-            <label><input name="che" type="checkbox" value="2" checked />Unit 3</label>
-            <label><input name="che" type="checkbox" value="3" checked />Unit 4</label>
-            <label><input name="che" type="checkbox" value="4" checked />Unit 5</label>
-            <br>
-            翻译涵盖：
-            <select name="cl" id="selects" class="search-sel">
-                <option value="0" selected>前</option>
-                <option value="1">后</option>
-            </select>
-            <input type="text" id="lens" class="search-txt" name="num" value="30" maxlength="2">组（共30组）
-            字体大小
-            <input type="range" id="slider" min="1" max="40" step="1" value="20" onmousemove="changeFontSize()"
-                style="width: 80px; height: 10px;" />
-        </fieldset>
-    </div>
-    <div class="mainbutton" id="buttons">
-        <button class="main" onclick="rand()" id="next">随机一组</button>
-        <button class="main" onclick="hides()" id="hide" style="width: 80px;">隐藏</button>
-    </div>
-    <div class="footer" id="footer">
-        <p class="centers">
-            Copyright &copy; 2019.Mauve All rights reserved.
-            <br>
-            <a href="English36/update.html" target="_blank" class="noline">更新日志</a> | 联系我
-            <a href="mailto:keqing.hu@icloud.com?Subject=Hello%20Mauve" class="noline">keqing.hu@icloud.com</a>
-        </p>
-    </div>
-    <script>
-        init();
-    </script>
+    <div">
+        <div id="clock" class="clock">
+        </div>
+        </div>
+        <div class="mode-box" id="modeSel">
+            <fieldset>
+                造句/小组讨论范围：
+                <label><input name="che" type="checkbox" value="0" checked />Unit 1</label>
+                <label><input name="che" type="checkbox" value="1" checked />Unit 2</label>
+                <label><input name="che" type="checkbox" value="2" checked />Unit 3</label>
+                <label><input name="che" type="checkbox" value="3" checked />Unit 4</label>
+                <label><input name="che" type="checkbox" value="4" checked />Unit 5</label>
+                Topic人数：
+                <select name="cl" id="people" class="search-sel">
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                翻译涵盖：
+                <select name="cl" id="selects" class="search-sel">
+                    <option value="0" selected>前</option>
+                    <option value="1">后</option>
+                </select>
+                <input type="text" id="lens" class="search-txt" name="num" value="30" maxlength="2">组（共30组）
+                字体大小
+                <input type="range" id="slider" min="1" max="40" step="1" value="20" onmousemove="changeFontSize()"
+                    style="width: 80px; height: 10px;" />
+                <label><input name="timeShow" type="checkbox" onchange="showTime()" id="timeShow" />显示倒计时</label>
+            </fieldset>
+        </div>
+        <div class="mainbutton" id="buttons">
+            <button class="main" onclick="rand('next')" id="next">36秒</button>
+            <button class="main" onclick="rand('topicButton')" id="topicButton">Topic</button>
+            <button class="main" onclick="hides()" id="hide">隐藏</button>
+        </div>
+        <div class="footer" id="footer">
+            <p class="centers">
+                Copyright &copy; 2019.Mauve All rights reserved.
+                <br>
+                <a href="English36/update.html" target="_blank" class="noline">更新日志</a> | 联系我
+                <a href="mailto:keqing.hu@icloud.com?Subject=Hello%20Mauve" class="noline">keqing.hu@icloud.com</a>
+            </p>
+        </div>
+        <script>
+            init();
+            startClock();
+        </script>
 </body>
 
 </html>
