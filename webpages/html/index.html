@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="te">
+    <div class="test">
         <div>
             <p id="0">
             </p>
@@ -29,9 +29,9 @@
             </p>
         </div>
     </div>
-    <div class="search-box">
+    <div class="mode-box" id="modeSel">
         <fieldset>
-            造句涵盖：
+            造句/小组讨论（暂未上线）涵盖：
             <label><input name="che" type="checkbox" value="0" checked />Unit 1</label>
             <label><input name="che" type="checkbox" value="1" checked />Unit 2</label>
             <label><input name="che" type="checkbox" value="2" checked />Unit 3</label>
@@ -44,12 +44,16 @@
                 <option value="1">后</option>
             </select>
             <input type="text" id="lens" class="search-txt" name="num" value="30" maxlength="2">组（共30组）
+            字体大小
+            <input type="range" id="slider" min="1" max="40" step="1" value="20" onmousemove="changeFontSize()"
+                style="width: 80px; height: 10px;" />
         </fieldset>
     </div>
-    <div class="main">
+    <div class="mainbutton" id="buttons">
         <button class="main" onclick="rand()" id="next">随机一组</button>
+        <button class="main" onclick="hides()" id="hide" style="width: 80px;">隐藏</button>
     </div>
-    <div class="footer">
+    <div class="footer" id="footer">
         <p class="centers">
             Copyright &copy; 2019.Mauve All rights reserved.
             <br>

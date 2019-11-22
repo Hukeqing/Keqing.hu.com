@@ -8,29 +8,35 @@ body {
 p {
     font-size: 20px;
     font-weight: 600;
+    /* opacity: 0; */
 }
 
-div.te {
+div.test {
     justify-content: center;
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 20%;
     left: 50%;
     transform: translate(-50%, 0);
     height: 80px;
-    width: 1000px;
+    width: 1300px;
 }
 
-.search-box {
-    position: absolute;
-    top: 80%;
+div.mode-box {
+    text-align: center;
+    line-height: 30px;
+    /* position: absolute; */
+    /* top: 80%; */
+    position: fixed;
+    bottom: 100px;
     left: 50%;
     transform: translate(-50%, 0);
     /* background: #2f3640; */
     height: 80px;
-    width: 450px;
+    width: 600px;
     border-radius: 40px;
     padding: 10px;
+    transition: 1s;
     /* transition: 0.4s; */
     /* opacity: 0.3; */
 }
@@ -66,9 +72,10 @@ div.te {
     width: 20px;
 }
 
-div.main {
+div.mainbutton {
     position: absolute;
-    top: 60%;
+    /* top: 60%; */
+    bottom: 30%;
     left: 50%;
     transform: translate(-50%, 0);
     height: 50px;
@@ -77,6 +84,8 @@ div.main {
     width: 400px;
     border-radius: 40px;
     padding: 10px;
+    transition: 1s;
+    z-index: 50;
 }
 
 button.main {
@@ -86,6 +95,7 @@ button.main {
     color: white;
     font-weight: 800;
     /* font-family: '微软雅黑'; */
+    z-index: 100;
     font-family: '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 }
 
@@ -97,6 +107,7 @@ div.footer {
     height: 80px;
     z-index: 9999;
     background-color: rgba(255, 255, 255, 0.8);
+    transition: 1s;
 }
 
 p.centers {

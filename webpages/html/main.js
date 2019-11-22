@@ -194,3 +194,23 @@ function endTime() {
     document.getElementById("next").innerHTML = "时间到";
     document.getElementById("next").style.backgroundColor = "red";
 }
+function changeFontSize() {
+    for (var i = 0; i < 6; i++)
+        document.getElementById(i.toString()).style.fontSize = document.getElementById("slider").value.toString() + "px";
+}
+var hidesStatus = false;
+function hides() {
+    hidesStatus = !hidesStatus;
+    if (hidesStatus) {
+        document.getElementById("footer").style.height = "0";
+        document.getElementById("modeSel").style.opacity = "0";
+        document.getElementById("buttons").style.bottom = "5%";
+        document.getElementById("hide").innerHTML = "显示";
+    }
+    else {
+        document.getElementById("footer").style.height = "80px";
+        document.getElementById("modeSel").style.opacity = "1";
+        document.getElementById("buttons").style.bottom = "30%";
+        document.getElementById("hide").innerHTML = "隐藏";
+    }
+}
