@@ -1,7 +1,5 @@
-var SentenceMaking = new Array();
 var Translate = new Array();
 var TopicList = new Array();
-var SentenceMakingDiv = new Array();
 var timeable;
 var time_log;
 var timeMax;
@@ -11,90 +9,6 @@ var flushWaitTime = 0.01;
 var hidesStatus = false;
 var radialObj;
 function init() {
-    SentenceMakingDiv[0] = 0;
-    //  1	Leisure activities
-    SentenceMaking[1] = "flash a smile";
-    SentenceMaking[2] = "make an attempt to do sth.";
-    SentenceMaking[3] = "end with";
-    SentenceMaking[4] = "like clockwork";
-    SentenceMaking[5] = "take on";
-    SentenceMaking[6] = "under arrest";
-    SentenceMaking[7] = "a string of";
-    SentenceMaking[8] = "be tempted to do sth.";
-    SentenceMaking[9] = "lie in...";
-    SentenceMaking[10] = "shatter one's life";
-    SentenceMaking[11] = "bury one's head in";
-    SentenceMaking[12] = "drive sb. to do sth.";
-    SentenceMaking[13] = "exert one's fatal attraction";
-    SentenceMakingDiv[1] = 13;
-
-    //  2	Power of Words
-    SentenceMaking[14] = "a pat on the back";
-    SentenceMaking[15] = "attach importance to";
-    SentenceMaking[16] = "be on to sth.";
-    SentenceMaking[17] = "follow sth. up";
-    SentenceMaking[18] = "lift up";
-    SentenceMaking[19] = "make sb's day";
-    SentenceMaking[20] = "pass along";
-    SentenceMaking[21] = "turn around";
-    SentenceMaking[22] = "walk of life";
-    SentenceMaking[23] = "act on/upon";
-    SentenceMaking[24] = "get out of hand";
-    SentenceMaking[25] = "if only…";
-    SentenceMaking[26] = "make sth. of";
-    SentenceMaking[27] = "be flooded with";
-    SentenceMaking[28] = "be credited for";
-    SentenceMaking[29] = "thrive on";
-    SentenceMaking[30] = "one in a million";
-    SentenceMaking[31] = "become accustomed to doing sth.";
-    SentenceMaking[32] = "proceed to sth.";
-    SentenceMakingDiv[2] = 32;
-
-    //  3 	Gender Differences
-    SentenceMaking[33] = "as a matter of fact";
-    SentenceMaking[34] = "in accordance with";
-    SentenceMaking[35] = "put...away";
-    SentenceMaking[36] = "turn out";
-    SentenceMaking[37] = "up to";
-    SentenceMaking[38] = "at a disadvantage";
-    SentenceMaking[39] = "be in a/the minority";
-    SentenceMaking[40] = "for ages";
-    SentenceMaking[41] = "go too far";
-    SentenceMaking[42] = "incorporate...into...";
-    SentenceMaking[43] = "favor...over...";
-    SentenceMaking[44] = "deprive...of...";
-    SentenceMaking[45] = "be superior to";
-    SentenceMaking[46] = "be typical of...";
-    SentenceMaking[47] = "be obliged to do sth.";
-    SentenceMakingDiv[3] = 47;
-
-    //  4	Creativity
-    SentenceMaking[48] = "for the sake of...";
-    SentenceMaking[49] = "not in the least ";
-    SentenceMaking[50] = "on occasion";
-    SentenceMaking[51] = "time and again";
-    SentenceMaking[52] = "cross the boundary";
-    SentenceMaking[53] = "fit into";
-    SentenceMaking[54] = "find one's way to/into...";
-    SentenceMaking[55] = "intervene into...";
-    SentenceMakingDiv[4] = 55;
-
-    //  5 Athletes
-    SentenceMaking[56] = "give of sth.";
-    SentenceMaking[57] = "have/throw a fit ";
-    SentenceMaking[58] = "measure up to";
-    SentenceMaking[59] = "put/place sb. on a pedestal";
-    SentenceMaking[60] = "take sth too far ";
-    SentenceMaking[61] = "worship the ground sb. Walks on";
-    SentenceMaking[62] = "you name it";
-    SentenceMaking[63] = "and the like";
-    SentenceMaking[64] = "look to";
-    SentenceMaking[65] = "needless to say";
-    SentenceMaking[66] = "rise above ";
-    SentenceMaking[67] = "Be bound to";
-    SentenceMaking[68] = "Follow one's lead";
-    SentenceMakingDiv[5] = 68;
-
     Translate[1] = "笔、墨、纸、砚在传统中国书法发展中扮演重要的角色。";
     Translate[2] = "中国是茶的故乡，茶也是中国的“国饮”。";
     Translate[3] = "中国瓷器不仅是生活必需品，而且也是宝贵的工艺品。";
@@ -156,9 +70,12 @@ function rand(mode) {
     var check = document.getElementsByName("che");
     var unit = new Array();
     var curList = new Array();
+    var sqlValue = "";
+    var sm;
     for (var i = 0; i < check.length; i++) {
         if (check[i].checked) {
             unit.push(parseInt(check[i].value));
+            sqlValue += check[i].value;
         }
     }
     if (unit.length == 0) {
@@ -190,16 +107,17 @@ function rand(mode) {
         document.getElementById("topicButton").style.backgroundColor = "rgb(0, 0, 255)";
         timeMax = 36;
         // console.log(unit);
-        while (curList.length < 4) {
-            var tmp = parseInt(unit[randomNum(0, unit.length - 1)]);
-            var temp = randomNum(SentenceMakingDiv[tmp] + 1, SentenceMakingDiv[tmp + 1]);
-            // console.log(temp);
-            if (!curList.includes(temp))
-                curList.push(temp);
-        }
-        for (var i = 0; i < 4; i++)
-            document.getElementById(i.toString()).innerHTML = SentenceMaking[curList[i]];
-
+        $.ajax({
+            url: 'http://119.3.172.223/test.php?cmd=eq&type=sm&value=' + sqlValue,
+            type: 'get',
+            success: function (response) {
+                response = eval('(' + response+ ')');
+                for (var i = 0; i < 4; ++i) {
+                    document.getElementById(i.toString()).innerHTML = response['a' + i.toString()];
+                    console.log(response['a' + i.toString()]);
+                }
+            }
+        });
         // Translate
         lens = document.getElementById("lens");
         lens.value = parseInt(lens.value);
@@ -215,6 +133,14 @@ function rand(mode) {
         } else {
             minn = 30 - parseInt(lens.value) + 1;
         }
+        $.ajax({
+            url: 'http://119.3.172.223/test.php?cmd=be&type=tr&value=' + (minn * 1000 + maxn).toString(),
+            type: 'get',
+            success: function (response) {
+                console.log(response);
+            }
+        });
+        //
         curList.push(randomNum(minn, maxn));
         while (true) {
             var temp = randomNum(minn, maxn);
@@ -223,8 +149,9 @@ function rand(mode) {
                 break;
             }
         }
-        document.getElementById("4").innerHTML = Translate[curList[4]];
-        document.getElementById("5").innerHTML = Translate[curList[5]];
+        //
+        document.getElementById("4").innerHTML = Translate[curList[0]];
+        document.getElementById("5").innerHTML = Translate[curList[1]];
         console.log(curList);
         // timeable = setTimeout("endTime();", 36000);
     }
