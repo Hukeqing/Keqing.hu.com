@@ -21,7 +21,7 @@ function init() {
     SentenceMaking[6] = "under arrest";
     SentenceMaking[7] = "a string of";
     SentenceMaking[8] = "be tempted to do sth.";
-    SentenceMaking[9] = "lie in…";
+    SentenceMaking[9] = "lie in...";
     SentenceMaking[10] = "shatter one's life";
     SentenceMaking[11] = "bury one's head in";
     SentenceMaking[12] = "drive sb. to do sth.";
@@ -53,37 +53,37 @@ function init() {
     //  3 	Gender Differences
     SentenceMaking[33] = "as a matter of fact";
     SentenceMaking[34] = "in accordance with";
-    SentenceMaking[35] = "put…away";
+    SentenceMaking[35] = "put...away";
     SentenceMaking[36] = "turn out";
     SentenceMaking[37] = "up to";
     SentenceMaking[38] = "at a disadvantage";
     SentenceMaking[39] = "be in a/the minority";
     SentenceMaking[40] = "for ages";
     SentenceMaking[41] = "go too far";
-    SentenceMaking[42] = "incorporate…into…";
-    SentenceMaking[43] = "favor… over…";
-    SentenceMaking[44] = "deprive…of…";
+    SentenceMaking[42] = "incorporate...into...";
+    SentenceMaking[43] = "favor...over...";
+    SentenceMaking[44] = "deprive...of...";
     SentenceMaking[45] = "be superior to";
-    SentenceMaking[46] = "be typical of…";
+    SentenceMaking[46] = "be typical of...";
     SentenceMaking[47] = "be obliged to do sth.";
     SentenceMakingDiv[3] = 47;
 
     //  4	Creativity
-    SentenceMaking[48] = "for the sake of…";
+    SentenceMaking[48] = "for the sake of...";
     SentenceMaking[49] = "not in the least ";
     SentenceMaking[50] = "on occasion";
     SentenceMaking[51] = "time and again";
     SentenceMaking[52] = "cross the boundary";
     SentenceMaking[53] = "fit into";
-    SentenceMaking[54] = "find one's way to/into…";
-    SentenceMaking[55] = "intervene into…";
+    SentenceMaking[54] = "find one's way to/into...";
+    SentenceMaking[55] = "intervene into...";
     SentenceMakingDiv[4] = 55;
 
     //  5 Athletes
     SentenceMaking[56] = "give of sth.";
-    SentenceMaking[57] = "have / throw a fit ";
+    SentenceMaking[57] = "have/throw a fit ";
     SentenceMaking[58] = "measure up to";
-    SentenceMaking[59] = "put / place sb. on a pedestal ";
+    SentenceMaking[59] = "put/place sb. on a pedestal";
     SentenceMaking[60] = "take sth too far ";
     SentenceMaking[61] = "worship the ground sb. Walks on";
     SentenceMaking[62] = "you name it";
@@ -179,7 +179,7 @@ function rand(mode) {
         document.getElementById("topicButton").style.backgroundColor = "buttonface";
         timeMax = parseInt(document.getElementById("people").value) * 45;
         var tmp = parseInt(unit[randomNum(0, unit.length - 1)]);
-        var temp = randomNum(unit[tmp] * 2 + 1, unit[tmp] * 2 + 2);
+        var temp = randomNum(tmp * 2 + 1, tmp * 2 + 2);
         console.log(temp);
         document.getElementById("0").innerHTML = TopicList[temp];
     } else {
@@ -192,7 +192,7 @@ function rand(mode) {
         // console.log(unit);
         while (curList.length < 4) {
             var tmp = parseInt(unit[randomNum(0, unit.length - 1)]);
-            var temp = randomNum(SentenceMakingDiv[unit[tmp]] + 1, SentenceMakingDiv[unit[tmp] + 1]);
+            var temp = randomNum(SentenceMakingDiv[tmp] + 1, SentenceMakingDiv[tmp + 1]);
             // console.log(temp);
             if (!curList.includes(temp))
                 curList.push(temp);
