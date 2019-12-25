@@ -71,7 +71,6 @@ function rand(mode) {
     var unit = new Array();
     var curList = new Array();
     var sqlValue = "";
-    var sm;
     for (var i = 0; i < check.length; i++) {
         if (check[i].checked) {
             unit.push(parseInt(check[i].value));
@@ -133,13 +132,13 @@ function rand(mode) {
         } else {
             minn = 30 - parseInt(lens.value) + 1;
         }
-        $.ajax({
-            url: 'http://119.3.172.223/test.php?cmd=be&type=tr&value=' + (minn * 1000 + maxn).toString(),
-            type: 'get',
-            success: function (response) {
-                console.log(response);
-            }
-        });
+        // $.ajax({
+        //     url: 'http://119.3.172.223/test.php?cmd=be&type=tr&value=' + (minn * 1000 + maxn).toString(),
+        //     type: 'get',
+        //     success: function (response) {
+        //         console.log(response);
+        //     }
+        // });
         //
         curList.push(randomNum(minn, maxn));
         while (true) {
